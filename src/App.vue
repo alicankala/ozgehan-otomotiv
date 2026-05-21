@@ -437,13 +437,13 @@ onUnmounted(() => {
           <button
   type="button"
   @click="prevReview"
-  class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none">
+  class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none cursor-pointer">
   ‹
 </button>
 <button
   type="button"
   @click="nextReview"
-  class="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none">
+  class="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none cursor-pointer">
   ›
 </button>
 
