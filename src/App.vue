@@ -211,18 +211,18 @@ onUnmounted(() => {
     <header class="bg-slate-950 text-white p-4 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
   <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
     <div class="flex items-center gap-2.5 md:gap-3 min-w-0">
-      <div class="w-9 h-9 md:w-10 md:h-10 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
-        <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+      <div class="w-10 h-10 md:w-14 md:h-14 bg-red-700 rounded-xl flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
       </div>
 
-      <div class="font-display text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wide whitespace-nowrap leading-none">
-        <span class="text-white">Özgehan</span>
-        <span class="text-slate-400 ml-1 font-bold">Otomotiv</span>
-      </div>
+      <div class="font-display text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black uppercase tracking-tight whitespace-nowrap leading-none">
+  <span class="text-white">Özgehan</span>
+  <span class="text-slate-400 ml-2 font-black">Otomotiv</span>
+</div>
     </div>
 
     <div class="flex items-center gap-3 md:gap-4 shrink-0">
-      <span class="text-slate-400 hidden lg:flex items-center gap-2 text-sm font-medium whitespace-nowrap">
+      <span class="text-slate-400 hidden xl:flex items-center gap-2 text-sm font-medium whitespace-nowrap">
         <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a.75.75 0 01.67.4l2.13 4.3 4.75.69a.75.75 0 01.41 1.28l-3.44 3.35.81 4.73c.06.35-.3.65-.62.47L10 14.98l-4.25 2.24a.75.75 0 01-1.09-.79l.81-4.73-3.44-3.35a.75.75 0 01.41-1.28l4.75-.69 2.13-4.3A.75.75 0 0110 2z" clip-rule="evenodd"/></svg>
         40 Yıllık Sanayi Tecrübesi
       </span>
