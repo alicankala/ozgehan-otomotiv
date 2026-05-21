@@ -108,14 +108,9 @@ const handleFormSubmit = async () => {
           <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-slate-950 leading-tight mb-3 md:mb-6">
             Aracınız<br/> <span class="text-red-700">Emin Ellerde</span>
           </h1>
-          <p class="text-base md:text-xl text-slate-700 mb-4 md:mb-6 leading-relaxed max-w-lg text-center md:text-left font-medium">
-            Profesyonel motor mekanik, periyodik bakım and arıza tespit işlemlerinizde yılların sanayi tecrübesiyle dürüst ve garantili hizmet.
+          <p class="text-base md:text-xl text-slate-700 mb-6 leading-relaxed max-w-lg text-center md:text-left font-medium">
+            Profesyonel motor mekanik, periyodik bakım ve arıza tespit işlemlerinizde yılların sanayi tecrübesiyle dürüst ve garantili hizmet.
           </p>
-          <div class="flex flex-wrap gap-1.5 md:gap-3 mb-6 justify-center md:justify-start">
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-50 text-slate-700 text-xs md:text-sm font-bold border border-slate-200 shadow-sm"><span class="text-red-600">✓</span> Garantili İşçilik</span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-50 text-slate-700 text-xs md:text-sm font-bold border border-slate-200 shadow-sm"><span class="text-red-600">✓</span> Şeffaf Fiyat</span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-50 text-slate-700 text-xs md:text-sm font-bold border border-slate-200 shadow-sm"><span class="text-red-600">✓</span> Hızlı Teslimat</span>
-          </div>
           <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <a href="https://wa.me/905326213429?text=Merhaba,%20sitenizden%20ulaşıyorum." target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold text-white transition-all bg-emerald-600 rounded-xl shadow-lg hover:bg-emerald-700 hover:-translate-y-1">💬 WhatsApp'tan Ulaşın</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Şaşmaz+Oto+Sanayi+Sitesi+Ankara" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold text-slate-700 transition-all bg-slate-100 rounded-xl border-2 border-slate-200 hover:bg-slate-200 hover:-translate-y-1">📍 Yol Tarifi Al</a>
@@ -175,30 +170,32 @@ const handleFormSubmit = async () => {
     <section class="py-8 md:py-24 bg-slate-100">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-xl md:text-5xl font-bold text-center mb-6 md:mb-12 text-slate-950">Hizmetlerimiz</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10">
-          <div class="p-4 md:p-8 bg-white rounded-2xl shadow-md border border-slate-200 hover:border-red-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center md:text-left group">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-100 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 mx-auto md:mx-0 shadow-inner transition-colors">
-              <svg class="w-5 h-5 md:w-8 md:h-8 text-slate-700 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.423 3.001c.101-.06.216-.092.333-.092.118 0 .233.031.334.092l7.33 4.364c.224.133.36.37.36.627v8.018c0 .257-.136.494-.36.627l-7.33 4.364a.669.669 0 01-.668 0l-7.33-4.364a.668.668 0 01-.36-.627V8.928c0-.257.136-.494.36-.627l7.33-4.364z"/></svg>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+          
+          <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 text-center hover:border-red-600 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+            <div class="w-8 h-8 md:w-12 md:h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4 border border-slate-200">
+              <svg class="w-4 h-4 md:w-6 md:h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.423 3.001c.101-.06.216-.092.333-.092.118 0 .233.031.334.092l7.33 4.364c.224.133.36.37.36.627v8.018c0 .257-.136.494-.36.627l-7.33 4.364a.669.669 0 01-.668 0l-7.33-4.364a.668.668 0 01-.36-.627V8.928c0-.257.136-.494.36-.627l7.33-4.364z"/></svg>
             </div>
-            <h3 class="text-base md:text-2xl font-bold mb-1 md:mb-3 text-slate-950">Motor Mekanik</h3>
-            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım işlemleri titizlikle yürütülür.</p>
+            <h3 class="text-slate-950 font-bold text-sm md:text-lg mb-1">Motor Mekanik</h3>
+            <p class="text-slate-600 text-xs">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım.</p>
           </div>
 
-          <div class="p-4 md:p-8 bg-white rounded-2xl shadow-md border border-slate-200 hover:border-red-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center md:text-left group">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-100 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 mx-auto md:mx-0 shadow-inner transition-colors">
-              <svg class="w-5 h-5 md:w-8 md:h-8 text-slate-700 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-1.43 2.861-6 8.586-6 11.25a6 6 0 1012 0c0-2.664-4.57-8.389-6-11.25z" /></svg>
+          <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 text-center hover:border-red-600 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+            <div class="w-8 h-8 md:w-12 md:h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4 border border-slate-200">
+              <svg class="w-4 h-4 md:w-6 md:h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-1.43 2.861-6 8.586-6 11.25a6 6 0 1012 0c0-2.664-4.57-8.389-6-11.25z" /></svg>
             </div>
-            <h3 class="text-base md:text-2xl font-bold mb-1 md:mb-3 text-slate-950">Periyodik Bakım</h3>
-            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">Yüksek kaliteli yağ filtre grupları ile periyodik bakım işlemlerinizi eksiksiz yerine getirmekteyiz.</p>
+            <h3 class="text-slate-950 font-bold text-sm md:text-lg mb-1">Periyodik Bakım</h3>
+            <p class="text-slate-600 text-xs">Yüksek kaliteli yağ filtre grupları ile periyodik sıvı bakımları.</p>
           </div>
 
-          <div class="p-4 md:p-8 bg-white rounded-2xl shadow-md border border-slate-200 hover:border-red-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center md:text-left group">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-100 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 mx-auto md:mx-0 shadow-inner transition-colors">
-              <svg class="w-5 h-5 md:w-8 md:h-8 text-slate-700 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 text-center hover:border-red-600 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 col-span-2 md:col-span-1">
+            <div class="w-8 h-8 md:w-12 md:h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4 border border-slate-200">
+              <svg class="w-4 h-4 md:w-6 md:h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="text-base md:text-2xl font-bold mb-1 md:mb-3 text-slate-950">Arıza Tespiti</h3>
-            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
+            <h3 class="text-slate-950 font-bold text-sm md:text-lg mb-1">Arıza Tespiti</h3>
+            <p class="text-slate-600 text-xs">Gelişmiş diagnostic bilgisayarları ile beyin taraması ve nokta atışı onarım.</p>
           </div>
+
         </div>
       </div>
     </section>
@@ -318,7 +315,6 @@ const handleFormSubmit = async () => {
 </template>
 
 <style>
-/* Kaydırma alanlarındaki gereksiz yatay taşmaları engellemek için */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
