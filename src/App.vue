@@ -106,6 +106,26 @@ const prevReview = () => {
   currentReview.value = (currentReview.value - 1 + reviews.length) % reviews.length
   startReviewTimer()
 }
+// İşletme Saatleri ve Açık/Kapalı Kontrolü
+const isOpen = ref(false)
+
+const checkIsOpen = () => {
+  const now = new Date()
+
+  const turkeyTime = new Date(
+    now.toLocaleString('en-US', { timeZone: 'Europe/Istanbul' })
+  )
+
+  const day = turkeyTime.getDay()
+  const hours = turkeyTime.getHours()
+  const minutes = turkeyTime.getMinutes()
+  const timeInMinutes = hours * 60 + minutes
+
+  const openTime = 8 * 60 + 30
+  const closeTime = 19 * 60
+
+  isOpen.value = day !== 0 && timeInMinutes >= openTime && timeInMinutes < closeTime
+}
 // Scroll reveal observer
 let observer = null
 let timeCheckInterval = null
@@ -413,7 +433,6 @@ onUnmounted(() => {
         </div>
 
         <div class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[240px] md:min-h-[220px] reveal">
->
           <div class="absolute top-6 left-8 text-red-100 font-serif text-8xl leading-none select-none pointer-events-none font-black">"</div>
           <button
   type="button"
