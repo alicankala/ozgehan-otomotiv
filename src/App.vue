@@ -62,10 +62,53 @@ const reviews = [
 ]
 
 let reviewTimer = null
+const reviewDragStartX = ref(null)
+
 const startReviewTimer = () => {
+  if (reviewTimer) clearInterval(reviewTimer)
+
   reviewTimer = setInterval(() => {
     currentReview.value = (currentReview.value + 1) % reviews.length
   }, 4500)
+}
+
+const goToReview = (index) => {
+  currentReview.value = index
+  startReviewTimer()
+}
+
+const nextReview = () => {
+  currentReview.value = (currentReview.value + 1) % reviews.length
+  startReviewTimer()
+}
+
+const prevReview = () => {
+  currentReview.value = (currentReview.value - 1 + reviews.length) % reviews.length
+  startReviewTimer()
+}
+
+const handleReviewPointerDown = (event) => {
+  reviewDragStartX.value = event.clientX
+}
+
+const handleReviewPointerUp = (event) => {
+  if (reviewDragStartX.value === null) return
+
+  const dragDistance = reviewDragStartX.value - event.clientX
+
+  if (Math.abs(dragDistance) > 50) {
+    if (dragDistance > 0) {
+      nextReview()
+    } else {
+      prevReview()
+    }
+  }
+
+  reviewDragStartX.value = null
+}
+
+const handleReviewPointerCancel = () => {
+  reviewDragStartX.value = null
 }
 // İşletme Saatleri ve Açık/Kapalı Kontrolü
 const isOpen = ref(false)
@@ -385,7 +428,14 @@ onUnmounted(() => {
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Müşteri Deneyimleri</h2>
         </div>
 
-        <div class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[180px] reveal">
+        <div
+  class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[180px] reveal select-none cursor-grab active:cursor-grabbing"
+  style="touch-action: pan-y;"
+  @pointerdown="handleReviewPointerDown"
+  @pointerup="handleReviewPointerUp"
+  @pointercancel="handleReviewPointerCancel"
+  @pointerleave="handleReviewPointerCancel"
+>
           <div class="absolute top-6 left-8 text-red-100 font-serif text-8xl leading-none select-none pointer-events-none font-black">"</div>
           <Transition name="review" mode="out-in">
             <div :key="currentReview">
@@ -408,7 +458,7 @@ onUnmounted(() => {
 
         <div class="flex justify-center gap-2 mt-5">
           <button v-for="(_, i) in reviews" :key="i"
-                  @click="currentReview = i;"
+                  @click="goToReview(i)"
                   class="w-2.5 h-2.5 rounded-full transition-all"
                   :class="i === currentReview ? 'bg-red-600 w-6' : 'bg-slate-300 hover:bg-slate-400'"></button>
         </div>
