@@ -68,8 +68,30 @@ const startReviewTimer = () => {
   }, 4500)
 }
 
+// İşletme Saatleri ve Açık/Kapalı Kontrolü
+const isOpen = ref(false)
+const currentTime = ref('')
+
+const checkIsOpen = () => {
+  const now = new Date()
+  const day = now.getDay() // 0 = Pazar, 1 = Pazartesi, ..., 6 = Cumartesi
+  const hours = now.getHours()
+  const minutes = now.getMinutes()
+  const timeInMinutes = hours * 60 + minutes
+  
+  // Çalışma saatleri: Pazartesi-Cumartesi 08:30-19:00
+  const openTime = 8 * 60 + 30 // 08:30
+  const closeTime = 19 * 60 // 19:00
+  
+  // Pazar (0) kapalı, Pazartesi-Cumartesi (1-6) açık
+  isOpen.value = day !== 0 && timeInMinutes >= openTime && timeInMinutes < closeTime
+  
+  currentTime.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
+}
+
 // Scroll reveal observer
 let observer = null
+let timeCheckInterval = null
 
 const handleFormSubmit = async () => {
   validatePhone()
@@ -117,6 +139,8 @@ const handleFormSubmit = async () => {
 
 onMounted(() => {
   startReviewTimer()
+  checkIsOpen()
+  timeCheckInterval = setInterval(checkIsOpen, 60000) // Saati her dakika güncelle
 
   // Scroll reveal
   const els = document.querySelectorAll('.reveal')
@@ -133,6 +157,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (reviewTimer) clearInterval(reviewTimer)
+  if (timeCheckInterval) clearInterval(timeCheckInterval)
   if (observer) observer.disconnect()
 })
 </script>
@@ -141,18 +166,18 @@ onUnmounted(() => {
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
     <header class="bg-slate-950 text-white p-4 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+      <div class="max-w-7xl mx-auto flex justify-center items-center">
+        <div class="flex items-center gap-2 md:gap-3">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
           </div>
-          <div class="font-display text-xl sm:text-2xl font-bold uppercase tracking-wide">
-            <span class="text-white">Özgehan</span>
-            <span class="text-slate-400 ml-1 font-bold">Otomotiv</span>
+          <div class="font-display text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-center">
+            <div class="text-white leading-none">Özgehan</div>
+            <div class="text-red-700 font-black text-lg md:text-2xl">Otomotiv</div>
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="absolute right-4 md:right-8 flex items-center gap-4">
           <a href="tel:05326213429" class="font-bold text-sm sm:text-base bg-red-700 px-4 sm:px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             <span class="hidden sm:block">0532 621 34 29</span>
@@ -197,11 +222,10 @@ onUnmounted(() => {
 
         <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
           <img :src="heroFoto" alt="Özgehan Otomotiv Servis Mekanik" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
-          <div class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-white/90 backdrop-blur border border-emerald-200 rounded-full px-3 py-2 shadow-lg">
-            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Şu an açık
-          </div>
-          <div class="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur text-white px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700">
-            🛡️ Ankara'nın Güvenilir Ustası
+          <div class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold rounded-full px-3 py-2 shadow-lg backdrop-blur border"
+               :class="isOpen ? 'text-emerald-700 bg-white/90 border-emerald-200' : 'text-red-700 bg-white/90 border-red-200'">
+            <span :class="isOpen ? 'w-2 h-2 bg-emerald-500 rounded-full animate-pulse' : 'w-2 h-2 bg-red-500 rounded-full'"></span>
+            {{ isOpen ? 'Açık' : 'Kapalı' }}
           </div>
         </div>
       </div>
@@ -215,7 +239,7 @@ onUnmounted(() => {
           <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Aracınızı güvenle teslim edebilmeniz için kaliteden ve şeffaflıktan ödün vermiyoruz.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           <div class="reveal reveal-delay-1 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
             <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
