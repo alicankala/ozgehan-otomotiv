@@ -191,6 +191,8 @@ onUnmounted(() => {
             <span>Ara</span>
           </a>
         </div>
+      </div>
+    </header>
 
     <main class="bg-white relative overflow-hidden">
       <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
