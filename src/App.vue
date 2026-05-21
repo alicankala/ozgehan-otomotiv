@@ -209,19 +209,19 @@ onUnmounted(() => {
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
     <header class="bg-slate-950 text-white p-4 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="max-w-7xl mx-auto flex justify-between items-center gap-3">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+          <div class="w-8 h-8 md:w-9 md:h-9 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-4.5 h-4.5 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
           </div>
-          <div class="font-display text-xl sm:text-2xl font-bold uppercase tracking-wide">
-            <span class="text-white">Özgehan</span>
-            <span class="text-slate-400 ml-1 font-bold">Otomotiv</span>
-          </div>
+          <div class="font-display font-bold uppercase tracking-wide leading-none whitespace-nowrap">
+  <span class="text-white text-base sm:text-xl md:text-2xl">Özgehan</span>
+  <span class="text-slate-400 ml-1 text-base sm:text-xl md:text-2xl">Otomotiv</span>
+</div>
         </div>
 
         <div class="flex items-center gap-4">
-          <a href="tel:05326213429" class="font-bold text-sm sm:text-base bg-red-700 px-4 sm:px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
+          <a href="tel:05326213429" class="font-bold text-xs sm:text-base bg-red-700 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             <span class="hidden sm:block">0532 621 34 29</span>
             <span class="block sm:hidden">Ara</span>
