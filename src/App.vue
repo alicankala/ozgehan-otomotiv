@@ -173,7 +173,7 @@ onUnmounted(() => {
           </div>
           <div class="font-display text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-center">
             <div class="text-white leading-none">Özgehan</div>
-            <div class="text-red-700 font-black text-lg md:text-2xl">Otomotiv</div>
+            <div class="text-slate-400 font-black text-lg md:text-2xl">Otomotiv</div>
           </div>
         </div>
 
@@ -231,7 +231,7 @@ onUnmounted(() => {
       </div>
     </main>
 
-    <section class="py-12 md:py-20 bg-slate-900 border-y border-slate-800">
+    <section class="py-8 md:py-20 bg-slate-900 border-y border-slate-800">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
@@ -275,7 +275,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-12 md:py-24 bg-slate-100 border-b border-slate-200">
+    <section class="py-8 md:py-24 bg-slate-100 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Uzman Kadro</span>
@@ -335,7 +335,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 md:py-20 bg-white border-b border-slate-200">
+    <section class="py-8 md:py-16 bg-white border-b border-slate-200">
       <div class="max-w-4xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal">
           <div class="w-24 h-24 md:w-28 md:h-28 bg-slate-900 text-white rounded-full flex items-center justify-center border-4 border-slate-100 shadow-xl shrink-0">
@@ -350,7 +350,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-slate-100 border-b border-slate-200">
+    <section class="py-8 md:py-16 bg-slate-100 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-10 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
@@ -374,7 +374,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-white border-b border-slate-100">
+    <section class="py-8 md:py-16 bg-white border-b border-slate-100">
       <div class="max-w-4xl mx-auto px-4">
         <div class="text-center mb-10 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Referanslar</span>
@@ -411,7 +411,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <section class="py-8 md:py-16 bg-slate-900 text-white border-t border-slate-800">
       <div class="max-w-xl mx-auto px-4">
         <div class="text-center mb-8 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-400 mb-3 block">Randevu & Bilgi</span>
