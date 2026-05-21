@@ -67,9 +67,31 @@ const startReviewTimer = () => {
     currentReview.value = (currentReview.value + 1) % reviews.length
   }, 4500)
 }
+// İşletme Saatleri ve Açık/Kapalı Kontrolü
+const isOpen = ref(false)
 
+const checkIsOpen = () => {
+  const now = new Date()
+
+  // Türkiye saatine göre hesapla
+  const turkeyTime = new Date(
+    now.toLocaleString('en-US', { timeZone: 'Europe/Istanbul' })
+  )
+
+  const day = turkeyTime.getDay() // 0 = Pazar, 1 = Pazartesi, ..., 6 = Cumartesi
+  const hours = turkeyTime.getHours()
+  const minutes = turkeyTime.getMinutes()
+  const timeInMinutes = hours * 60 + minutes
+
+  const openTime = 8 * 60 + 30  // 08:30
+  const closeTime = 19 * 60     // 19:00
+
+  // Pazar kapalı, Pazartesi-Cumartesi 08:30-19:00 açık
+  isOpen.value = day !== 0 && timeInMinutes >= openTime && timeInMinutes < closeTime
+}
 // Scroll reveal observer
 let observer = null
+let timeCheckInterval = null
 
 const handleFormSubmit = async () => {
   validatePhone()
@@ -117,6 +139,8 @@ const handleFormSubmit = async () => {
 
 onMounted(() => {
   startReviewTimer()
+  checkIsOpen()
+  timeCheckInterval = setInterval(checkIsOpen, 60000)
 
   // Scroll reveal
   const els = document.querySelectorAll('.reveal')
@@ -133,6 +157,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (reviewTimer) clearInterval(reviewTimer)
+  if (timeCheckInterval) clearInterval(timeCheckInterval)
   if (observer) observer.disconnect()
 })
 </script>
@@ -197,12 +222,15 @@ onUnmounted(() => {
 
         <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
           <img :src="heroFoto" alt="Özgehan Otomotiv Servis Mekanik" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
-          <div class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-white/90 backdrop-blur border border-emerald-200 rounded-full px-3 py-2 shadow-lg">
-            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Şu an açık
-          </div>
-          <div class="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur text-white px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700">
-            🛡️ Ankara'nın Güvenilir Ustası
-          </div>
+          <div
+  class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold rounded-full px-3 py-2 shadow-lg backdrop-blur border"
+  :class="isOpen ? 'text-emerald-700 bg-white/90 border-emerald-200' : 'text-red-700 bg-white/90 border-red-200'"
+>
+  <span
+    :class="isOpen ? 'w-2 h-2 bg-emerald-500 rounded-full animate-pulse' : 'w-2 h-2 bg-red-500 rounded-full'"
+  ></span>
+  {{ isOpen ? 'Şu an açık' : 'Şu an kapalı' }}
+</div>
         </div>
       </div>
     </main>
@@ -259,49 +287,49 @@ onUnmounted(() => {
           <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base">Tüm araç markaları ve modellerinde profesyonel servis hizmeti sunuyoruz.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          <div class="reveal reveal-delay-1 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
+          <div class="reveal reveal-delay-1 p-3 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-9 h-9 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Motor Mekanik</h3>
+              <h3 class="text-sm md:text-xl font-bold text-slate-950">Motor Mekanik</h3>
               <span class="text-xs font-semibold text-red-600 bg-red-50 border border-red-100 px-2 py-1 rounded-full whitespace-nowrap">Ağır Servis</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım işlemleri titizlikle yürütülür.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-snug md:leading-relaxed mb-2 md:mb-5 text-[11px] md:text-sm">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım işlemleri titizlikle yürütülür.</p>
+            <ul class="space-y-1 md:space-y-1.5 text-[10px] md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Motor Revizyonu</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Şanzıman Onarımı</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Alt Takım & Süspansiyon</li>
             </ul>
           </div>
 
-          <div class="reveal reveal-delay-2 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+          <div class="reveal reveal-delay-2 p-3 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-9 h-9 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-1.43 2.861-6 8.586-6 11.25a6 6 0 1012 0c0-2.664-4.57-8.389-6-11.25z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Periyodik Bakım</h3>
+              <h3 class="text-sm md:text-xl font-bold text-slate-950">Periyodik Bakım</h3>
               <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-1 rounded-full whitespace-nowrap">Aynı Gün</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Yüksek kaliteli yağ ve filtre grupları ile periyodik bakım işlemlerinizi eksiksiz yerine getirmekteyiz.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-snug md:leading-relaxed mb-2 md:mb-5 text-[11px] md:text-sm">Yüksek kaliteli yağ ve filtre grupları ile periyodik bakım işlemlerinizi eksiksiz yerine getirmekteyiz.</p>
+            <ul class="space-y-1 md:space-y-1.5 text-[10px] md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Motor Yağı & Filtresi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Fren Sıvısı Değişimi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Triger Seti Değişimi</li>
             </ul>
           </div>
 
-          <div class="reveal reveal-delay-3 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+          <div class="reveal reveal-delay-3 p-3 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-9 h-9 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Arıza Tespiti</h3>
+              <h3 class="text-sm md:text-xl font-bold text-slate-950">Arıza Tespiti</h3>
               <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-2 py-1 rounded-full whitespace-nowrap">Dijital Tarama</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-snug md:leading-relaxed mb-2 md:mb-5 text-[11px] md:text-sm">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
+            <ul class="space-y-1 md:space-y-1.5 text-[10px] md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>OBD-II Diagnostik</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Motor Lambası Analizi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Aktarma Organları Tarama</li>
@@ -332,11 +360,11 @@ onUnmounted(() => {
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Ustalığımız ve Atölyemiz</h2>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           <div v-for="(img, i) in [is1, is2, is3]" :key="i"
-               class="reveal aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-red-400 hover:shadow-xl transition-all cursor-pointer group"
-               :class="`reveal-delay-${i+1}`"
-               @click="selectedImage = img">
+     class="reveal aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-red-400 hover:shadow-xl transition-all cursor-pointer group"
+     :class="[`reveal-delay-${i+1}`, i === 2 ? 'col-span-2 md:col-span-1' : '']"
+     @click="selectedImage = img">
             <div class="relative w-full h-full overflow-hidden">
               <img :src="img" loading="lazy" :alt="`Atölye Fotoğrafı ${i+1}`" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
               <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
