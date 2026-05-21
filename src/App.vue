@@ -18,13 +18,13 @@ const isSubmitted = ref(false)
 const isLoading = ref(false)
 const phoneError = ref('')
 
-// TELEFON NUMARASI MASKESİ (Claude'un sildiği, sadece rakam ve max 11 hane kuralı)
+// TELEFON NUMARASI MASKESİ 
 const handlePhoneInput = (e) => {
   let val = e.target.value.replace(/\D/g, ''); 
   if (val.length > 0 && val[0] !== '0') val = '0' + val; 
   if (val.length > 11) val = val.slice(0, 11); 
   phone.value = val;
-  if (phoneError.value) phoneError.value = ''; // Yazarken hatayı gizle
+  if (phoneError.value) phoneError.value = '';
 }
 
 const validatePhone = () => {
@@ -173,36 +173,6 @@ onUnmounted(() => {
 
 <template>
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
-      body { font-family: 'DM Sans', sans-serif; }
-      .font-display { font-family: 'Syne', sans-serif; }
-
-      /* Scroll reveal */
-      .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-      .reveal.revealed { opacity: 1; transform: translateY(0); }
-      .reveal-delay-1 { transition-delay: 0.1s; }
-      .reveal-delay-2 { transition-delay: 0.2s; }
-      .reveal-delay-3 { transition-delay: 0.3s; }
-      .reveal-delay-4 { transition-delay: 0.4s; }
-
-      /* Review carousel transition */
-      .review-enter-active, .review-leave-active { transition: opacity 0.4s ease, transform 0.4s ease; }
-      .review-enter-from { opacity: 0; transform: translateY(10px); }
-      .review-leave-to { opacity: 0; transform: translateY(-10px); position: absolute; }
-
-      /* Noise texture overlay */
-      .noise::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-        pointer-events: none;
-        z-index: 0;
-      }
-    </style>
 
     <header class="bg-slate-950 text-white p-4 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -617,3 +587,33 @@ onUnmounted(() => {
 
   </div>
 </template>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+  body { font-family: 'DM Sans', sans-serif; }
+  .font-display { font-family: 'Syne', sans-serif; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.revealed { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* Review carousel transition */
+  .review-enter-active, .review-leave-active { transition: opacity 0.4s ease, transform 0.4s ease; }
+  .review-enter-from { opacity: 0; transform: translateY(10px); }
+  .review-leave-to { opacity: 0; transform: translateY(-10px); position: absolute; }
+
+  /* Noise texture overlay */
+  .noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>
