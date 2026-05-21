@@ -429,7 +429,7 @@ onUnmounted(() => {
         </div>
 
         <div
-  class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[180px] reveal select-none cursor-grab active:cursor-grabbing"
+  class="relative bg-slate-50 rounded-3xl p-6 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[280px] md:min-h-[240px] reveal select-none cursor-grab active:cursor-grabbing"
   style="touch-action: pan-y;"
   @pointerdown="handleReviewPointerDown"
   @pointerup="handleReviewPointerUp"
@@ -439,7 +439,7 @@ onUnmounted(() => {
           <div class="absolute top-6 left-8 text-red-100 font-serif text-8xl leading-none select-none pointer-events-none font-black">"</div>
           <Transition name="review" mode="out-in">
             <div :key="currentReview">
-              <p class="text-lg md:text-xl text-slate-700 leading-relaxed italic mb-6 relative z-10">
+              <p class="text-base md:text-xl text-slate-700 leading-relaxed italic mb-6 relative z-10">
                 "{{ reviews[currentReview].text }}"
               </p>
               <div class="flex items-center gap-3">
@@ -618,7 +618,7 @@ onUnmounted(() => {
   /* Review carousel transition */
   .review-enter-active, .review-leave-active { transition: opacity 0.4s ease, transform 0.4s ease; }
   .review-enter-from { opacity: 0; transform: translateY(10px); }
-  .review-leave-to { opacity: 0; transform: translateY(-10px); position: absolute; }
+  .review-leave-to { opacity: 0; transform: translateY(-10px); }
 
   /* Noise texture overlay */
   .noise::before {
