@@ -83,7 +83,29 @@ const reviews = [
 ]
 
 let reviewTimer = null
-const reviewDragStartX = ref(null)
+
+const startReviewTimer = () => {
+  if (reviewTimer) clearInterval(reviewTimer)
+
+  reviewTimer = setInterval(() => {
+    currentReview.value = (currentReview.value + 1) % reviews.length
+  }, 4500)
+}
+
+const goToReview = (index) => {
+  currentReview.value = index
+  startReviewTimer()
+}
+
+const nextReview = () => {
+  currentReview.value = (currentReview.value + 1) % reviews.length
+  startReviewTimer()
+}
+
+const prevReview = () => {
+  currentReview.value = (currentReview.value - 1 + reviews.length) % reviews.length
+  startReviewTimer()
+}
 
 const startReviewTimer = () => {
   if (reviewTimer) clearInterval(reviewTimer)
@@ -459,15 +481,22 @@ onUnmounted(() => {
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Müşteri Deneyimleri</h2>
         </div>
 
-        <div
-  class="relative bg-slate-50 rounded-3xl p-6 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[280px] md:min-h-[240px] reveal select-none cursor-grab active:cursor-grabbing"
-  style="touch-action: pan-y;"
-  @pointerdown="handleReviewPointerDown"
-  @pointerup="handleReviewPointerUp"
-  @pointercancel="handleReviewPointerCancel"
-  @pointerleave="handleReviewPointerCancel"
+        <div class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[240px] md:min-h-[220px] reveal">
 >
           <div class="absolute top-6 left-8 text-red-100 font-serif text-8xl leading-none select-none pointer-events-none font-black">"</div>
+          <button
+  type="button"
+  @click="prevReview"
+  class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none">
+  ‹
+</button>
+<button
+  type="button"
+  @click="nextReview"
+  class="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none">
+  ›
+</button>
+
           <Transition name="review" mode="out-in">
             <div :key="currentReview">
               <p class="text-base md:text-xl text-slate-700 leading-relaxed italic mb-6 relative z-10">
@@ -489,9 +518,9 @@ onUnmounted(() => {
 
         <div class="flex justify-center gap-2 mt-5">
           <button v-for="(_, i) in reviews" :key="i"
-                  @click="goToReview(i)"
-                  class="w-2.5 h-2.5 rounded-full transition-all"
-                  :class="i === currentReview ? 'bg-red-600 w-6' : 'bg-slate-300 hover:bg-slate-400'"></button>
+        @click="goToReview(i)"
+        class="w-2.5 h-2.5 rounded-full transition-all"
+        :class="i === currentReview ? 'bg-red-600 w-6' : 'bg-slate-300 hover:bg-slate-400'"></button>
         </div>
       </div>
     </section>
