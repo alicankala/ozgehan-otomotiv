@@ -320,7 +320,7 @@ onUnmounted(() => {
             </ul>
           </div>
 
-          <div class="reveal reveal-delay-3 p-3 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+          <div class="reveal reveal-delay-3 col-span-2 md:col-span-1 p-3 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
             <div class="w-9 h-9 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
