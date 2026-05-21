@@ -7,7 +7,28 @@ import is2 from './assets/is-2.jpg.jpeg'
 import is3 from './assets/is-3.jpg.jpeg'
 
 // Lightbox
+const galleryImages = [is1, is2, is3]
 const selectedImage = ref(null)
+const selectedImageIndex = ref(0)
+
+const openLightbox = (index) => {
+  selectedImageIndex.value = index
+  selectedImage.value = galleryImages[index]
+}
+
+const closeLightbox = () => {
+  selectedImage.value = null
+}
+
+const nextImage = () => {
+  selectedImageIndex.value = (selectedImageIndex.value + 1) % galleryImages.length
+  selectedImage.value = galleryImages[selectedImageIndex.value]
+}
+
+const prevImage = () => {
+  selectedImageIndex.value = (selectedImageIndex.value - 1 + galleryImages.length) % galleryImages.length
+  selectedImage.value = galleryImages[selectedImageIndex.value]
+}
 
 // Form
 const name = ref('')
@@ -414,10 +435,10 @@ onUnmounted(() => {
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Ustalığımız ve Atölyemiz</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-          <div v-for="(img, i) in [is1, is2, is3]" :key="i"
+          <div v-for="(img, i) in galleryImages" :key="i"
      class="reveal aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-red-400 hover:shadow-xl transition-all cursor-pointer group"
      :class="[`reveal-delay-${i+1}`, i === 2 ? 'col-span-2 md:col-span-1' : '']"
-     @click="selectedImage = img">
+     @click="openLightbox(i)">
             <div class="relative w-full h-full overflow-hidden">
               <img :src="img" loading="lazy" :alt="`Atölye Fotoğrafı ${i+1}`" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
               <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
@@ -600,13 +621,36 @@ onUnmounted(() => {
     </div>
 
     <Teleport to="body">
-      <div v-if="selectedImage"
-           class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm cursor-pointer"
-           @click="selectedImage = null">
-        <button class="absolute top-4 right-6 text-white/70 hover:text-white text-4xl hover:scale-110 transition-all leading-none">×</button>
-        <img :src="selectedImage" class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl cursor-default ring-2 ring-white/10" @click.stop/>
-      </div>
-    </Teleport>
+  <div v-if="selectedImage"
+       class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm cursor-pointer"
+       @click="closeLightbox">
+
+    <button
+      class="absolute top-4 right-6 text-white/70 hover:text-white text-4xl hover:scale-110 transition-all leading-none z-20"
+      @click.stop="closeLightbox">
+      ×
+    </button>
+
+    <button
+      class="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 text-white text-3xl md:text-4xl flex items-center justify-center backdrop-blur border border-white/20 transition-all z-20"
+      @click.stop="prevImage">
+      ‹
+    </button>
+
+    <img
+      :src="selectedImage"
+      class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl cursor-default ring-2 ring-white/10"
+      @click.stop
+    />
+
+    <button
+      class="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 text-white text-3xl md:text-4xl flex items-center justify-center backdrop-blur border border-white/20 transition-all z-20"
+      @click.stop="nextImage">
+      ›
+    </button>
+
+  </div>
+</Teleport>
 
   </div>
 </template>
