@@ -165,27 +165,32 @@ onUnmounted(() => {
 <template>
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
-    <header class="bg-slate-950 text-white p-4 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
-      <div class="max-w-7xl mx-auto flex justify-center items-center">
-        <div class="flex items-center gap-2 md:gap-3">
-          <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+    <header class="bg-slate-950 text-white p-3 md:p-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center">
+        <div class="flex items-center gap-1.5 md:gap-3">
+          <div class="w-8 h-8 md:w-12 md:h-12 bg-red-700 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
           </div>
-          <div class="font-display text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-center">
-            <div class="text-white leading-none">Özgehan</div>
-            <div class="text-slate-400 font-black text-lg md:text-2xl">Otomotiv</div>
+          <div class="font-display text-sm sm:text-lg md:text-3xl font-bold uppercase tracking-wide">
+            <div class="text-white leading-tight">Özgehan</div>
+            <div class="text-slate-400 font-black text-xs sm:text-sm md:text-2xl">Otomotiv</div>
           </div>
         </div>
 
-        <div class="absolute right-4 md:right-8 flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-4">
           <a href="tel:05326213429" class="font-bold text-sm sm:text-base bg-red-700 px-4 sm:px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             <span class="hidden sm:block">0532 621 34 29</span>
             <span class="block sm:hidden">Ara</span>
           </a>
         </div>
-      </div>
-    </header>
+
+        <div class="md:hidden flex items-center gap-2">
+          <a href="tel:05326213429" class="font-bold text-xs bg-red-700 px-3 py-2 rounded-full hover:bg-red-600 transition-all flex items-center gap-1.5 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span>Ara</span>
+          </a>
+        </div>
 
     <main class="bg-white relative overflow-hidden">
       <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
@@ -231,101 +236,101 @@ onUnmounted(() => {
       </div>
     </main>
 
-    <section class="py-8 md:py-20 bg-slate-900 border-y border-slate-800">
+    <section class="py-6 md:py-20 bg-slate-900 border-y border-slate-800">
       <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-8 md:mb-12 reveal">
-          <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
-          <h2 class="font-display text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
-          <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Aracınızı güvenle teslim edebilmeniz için kaliteden ve şeffaflıktan ödün vermiyoruz.</p>
+        <div class="text-center mb-6 md:mb-12 reveal">
+          <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-2 block">Farkımız</span>
+          <h2 class="font-display text-xl md:text-4xl font-bold text-white mb-2 md:mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-xs md:text-base">Aracınızı güvenle teslim edebilmeniz için kaliteden ve şeffaflıktan ödün vermiyoruz.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          <div class="reveal reveal-delay-1 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
+          <div class="reveal reveal-delay-1 bg-slate-950 p-3 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-9 h-9 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Dürüst Fiyatlandırma</h3>
+            <h3 class="text-white font-bold text-xs md:text-base mb-1 md:mb-2">Dürüst Fiyatlandırma</h3>
             <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Aracınıza yalnızca gerçekten ihtiyaç duyulan işlemler uygulanır.</p>
           </div>
 
-          <div class="reveal reveal-delay-2 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+          <div class="reveal reveal-delay-2 bg-slate-950 p-3 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-9 h-9 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
             </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Kaliteli Parça</h3>
+            <h3 class="text-white font-bold text-xs md:text-base mb-1 md:mb-2">Kaliteli Parça</h3>
             <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Orijinal ve OEM onaylı yedek parçalarla aracınızın ömrü uzatılır.</p>
           </div>
 
-          <div class="reveal reveal-delay-3 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+          <div class="reveal reveal-delay-3 bg-slate-950 p-3 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-9 h-9 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Garantili İşçilik</h3>
+            <h3 class="text-white font-bold text-xs md:text-base mb-1 md:mb-2">Garantili İşçilik</h3>
             <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Her mekanik işlem ve parça değişimi usta garantimiz altındadır.</p>
           </div>
 
-          <div class="reveal reveal-delay-4 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+          <div class="reveal reveal-delay-4 bg-slate-950 p-3 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-9 h-9 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Hızlı Teslimat</h3>
+            <h3 class="text-white font-bold text-xs md:text-base mb-1 md:mb-2">Hızlı Teslimat</h3>
             <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Zamanınızın değerini biliyor, aracınızı söz verilen sürede teslim ediyoruz.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-8 md:py-24 bg-slate-100 border-b border-slate-200">
+    <section class="py-6 md:py-24 bg-slate-100 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-8 md:mb-12 reveal">
-          <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Uzman Kadro</span>
-          <h2 class="font-display text-2xl md:text-5xl font-bold text-slate-950 mb-3">Hizmetlerimiz</h2>
-          <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base">Tüm araç markaları ve modellerinde profesyonel servis hizmeti sunuyoruz.</p>
+        <div class="text-center mb-6 md:mb-12 reveal">
+          <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2 block">Uzman Kadro</span>
+          <h2 class="font-display text-xl md:text-5xl font-bold text-slate-950 mb-2">Hizmetlerimiz</h2>
+          <p class="text-slate-500 max-w-xl mx-auto text-xs md:text-base">Tüm araç markaları ve modellerinde profesyonel servis hizmeti sunuyoruz.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          <div class="reveal reveal-delay-1 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8">
+          <div class="reveal reveal-delay-1 p-4 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Motor Mekanik</h3>
+              <h3 class="text-base md:text-xl font-bold text-slate-950">Motor Mekanik</h3>
               <span class="text-xs font-semibold text-red-600 bg-red-50 border border-red-100 px-2 py-1 rounded-full whitespace-nowrap">Ağır Servis</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım işlemleri titizlikle yürütülür.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-relaxed mb-3 md:mb-5 text-xs md:text-sm">Motor rektefiye, şanzıman onarımı, alt takım, süspansiyon ve ağır bakım işlemleri titizlikle yürütülür.</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-xs md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Motor Revizyonu</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Şanzıman Onarımı</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0"></span>Alt Takım & Süspansiyon</li>
             </ul>
           </div>
 
-          <div class="reveal reveal-delay-2 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+          <div class="reveal reveal-delay-2 p-4 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-1.43 2.861-6 8.586-6 11.25a6 6 0 1012 0c0-2.664-4.57-8.389-6-11.25z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Periyodik Bakım</h3>
+              <h3 class="text-base md:text-xl font-bold text-slate-950">Periyodik Bakım</h3>
               <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-1 rounded-full whitespace-nowrap">Aynı Gün</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Yüksek kaliteli yağ ve filtre grupları ile periyodik bakım işlemlerinizi eksiksiz yerine getirmekteyiz.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-relaxed mb-3 md:mb-5 text-xs md:text-sm">Yüksek kaliteli yağ ve filtre grupları ile periyodik bakım işlemlerinizi eksiksiz yerine getirmekteyiz.</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-xs md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Motor Yağı & Filtresi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Fren Sıvısı Değişimi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0"></span>Triger Seti Değişimi</li>
             </ul>
           </div>
 
-          <div class="reveal reveal-delay-3 p-5 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
-            <div class="w-11 h-11 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
+          <div class="reveal reveal-delay-3 p-4 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
+            <div class="w-10 h-10 md:w-14 md:h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-3 md:mb-6 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
               <svg class="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
             <div class="flex items-start justify-between mb-2 md:mb-3">
-              <h3 class="text-lg md:text-xl font-bold text-slate-950">Arıza Tespiti</h3>
+              <h3 class="text-base md:text-xl font-bold text-slate-950">Arıza Tespiti</h3>
               <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-2 py-1 rounded-full whitespace-nowrap">Dijital Tarama</span>
             </div>
-            <p class="text-slate-500 leading-relaxed mb-4 md:mb-5 text-sm">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-sm text-slate-600">
+            <p class="text-slate-500 leading-relaxed mb-3 md:mb-5 text-xs md:text-sm">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 md:block gap-1.5 md:space-y-1.5 text-xs md:text-sm text-slate-600">
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>OBD-II Diagnostik</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Motor Lambası Analizi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Aktarma Organları Tarama</li>
