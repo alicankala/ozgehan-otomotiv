@@ -562,9 +562,9 @@ onUnmounted(() => {
               <div>
                 <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
                 <div class="flex flex-col gap-1.5">
-                  <a href="tel:05326213429" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
-                  <a href="tel:05058586591" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
-                  <a href="tel:05077276716" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
+                  <a href="tel:05326213429" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
+                  <a href="tel:05058586591" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
+                  <a href="tel:05077276716" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
                 </div>
               </div>
             </div>
