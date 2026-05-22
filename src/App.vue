@@ -377,9 +377,9 @@ onUnmounted(() => {
             </div>
             <p class="text-slate-500 leading-snug md:leading-relaxed mb-2 md:mb-5 text-[11px] md:text-sm">Gelişmiş arıza tespit bilgisayarları ile aracın beyni taranarak nokta atışı onarım yapılır.</p>
             <ul class="space-y-1 md:space-y-1.5 text-[10px] md:text-sm text-slate-600">
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>OBD-II Diagnostik</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Motor Lambası Analizi</li>
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Aktarma Organları Tarama</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>Elektronik Sistem Analizi</li>
             </ul>
           </div>
         </div>
