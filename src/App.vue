@@ -561,9 +561,14 @@ onUnmounted(() => {
             <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
               <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📞</div>
               <div>
-                <div class="font-semibold text-white mb-0.5">Telefon</div>
-                <a href="tel:05326213429" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">0532 621 34 29</a>
-              </div>
+                <div>
+  <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
+  <div class="flex flex-col gap-1.5">
+    <a href="tel:05326213429" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
+    <a href="tel:05058586591" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
+    <a href="tel:05077276716" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -574,13 +579,12 @@ onUnmounted(() => {
     </section>
 
     <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800 text-sm">
-      <div class="space-y-2">
-        <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
-        <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
-        <p><a href="tel:05326213429" class="hover:text-white transition-colors">📞 0532 621 34 29</a></p>
-        <p class="text-xs opacity-50 pt-2">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
-      </div>
-    </footer>
+  <div class="space-y-2">
+    <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
+    <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
+    <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
 
     <div class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-3 text-center text-white font-bold text-xs shadow-2xl z-50 safe-area-bottom">
       <a href="tel:05326213429" class="py-3.5 border-r border-slate-800 flex flex-col items-center justify-center gap-1 active:bg-slate-900 transition-colors">
