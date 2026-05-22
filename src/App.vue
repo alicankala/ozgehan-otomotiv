@@ -395,7 +395,7 @@ onUnmounted(() => {
           <div class="text-center md:text-left">
             <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2 block">Biz Kimiz?</span>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950 mb-4">Hakkımızda</h2>
-            <p class="text-lg text-slate-600 leading-relaxed">Özgehan Otomotiv, Ankara <strong class="text-slate-900">Mega Şaşmaz'da</strong> uzun yıllara dayanan sektörel tecrübe ve çekirdekten yetişme profesyonel usta kadrosuyla hizmet vermektedir. Kurulduğumuz günden bu yana temel ilkemiz müşteri memnuniyetidir.</p>
+            <p class="text-lg text-slate-600 leading-relaxed">Özgehan Otomotiv, Ankara <strong class="text-slate-900">Mega Şaşmaz'da</strong> uzun yıllara dayanan sektörel tecrübe ve çekirdekten yetişme profesyonel usta kadrosuyla hizmet vermektedir. Kurulduğumuz günden bu yana temel ilkemiz </strong>müşteri memnuniyetidir</strong>.</p>
           </div>
         </div>
       </div>
