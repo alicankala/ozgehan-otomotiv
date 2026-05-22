@@ -219,7 +219,7 @@ onUnmounted(() => {
     <div class="hidden md:flex items-center gap-4">
       <span class="text-slate-400 hidden lg:flex items-center gap-2 text-sm font-medium whitespace-nowrap">
         <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a.75.75 0 01.67.4l2.13 4.3 4.75.69a.75.75 0 01.41 1.28l-3.44 3.35.81 4.73c.06.35-.3.65-.62.47L10 14.98l-4.25 2.24a.75.75 0 01-1.09-.79l.81-4.73-3.44-3.35a.75.75 0 01.41-1.28l4.75-.69 2.13-4.3A.75.75 0 0110 2z" clip-rule="evenodd"/></svg>
-        40 Yıllık Sanayi Tecrübesi
+        52 Yıllık Sanayi Tecrübesi
       </span>
 
       <a href="tel:05326213429" class="font-bold text-base bg-red-700 px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
@@ -238,7 +238,7 @@ onUnmounted(() => {
         <div class="text-center md:text-left flex flex-col items-center md:items-start">
 <div class="inline-flex lg:hidden items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-sm font-semibold text-amber-800 mb-6">
   <svg class="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a.75.75 0 01.67.4l2.13 4.3 4.75.69a.75.75 0 01.41 1.28l-3.44 3.35.81 4.73c.06.35-.3.65-.62.47L10 14.98l-4.25 2.24a.75.75 0 01-1.09-.79l.81-4.73-3.44-3.35a.75.75 0 01.41-1.28l4.75-.69 2.13-4.3A.75.75 0 0110 2z" clip-rule="evenodd"/></svg>
-  40 Yıllık Sanayi Tecrübesi
+  52 Yıllık Sanayi Tecrübesi
 </div>
           <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
             Aracınız<br/>
