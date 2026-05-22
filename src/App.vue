@@ -568,7 +568,7 @@ onUnmounted(() => {
           </div>
         </div>
         <div class="w-full h-72 bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700 reveal">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12234.33120713063!2d32.721458999999995!3d39.950702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d33816ca3ab737%3A0xe104ffc20f180746!2s%C5%9Ea%C5%9Fmaz%20Oto%20Sanayi%20Sitesi!5e0!3m2!1str!2str!4v1716301234567!5m2!1str!2str" loading="lazy" width="100%" height="100%" style="border:0;" allowfullscreen=""></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.570177466949!2d32.719895799999996!3d39.9286341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347ee37df85e5%3A0x41d15ac7bb58e9b!2zTWVnYSDFnmHFn21heg!5e0!3m2!1str!2str!4v1779471948767!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
