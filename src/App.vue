@@ -534,59 +534,120 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-<section class="bg-slate-900 text-white py-16 border-t-4 border-red-700">
-      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <span class="text-xs font-bold tracking-widest uppercase text-red-400 mb-3 block">Ulaşın</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">İletişim Bilgileri</h2>
-          <div class="space-y-5">
-            <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
-              <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📍</div>
-              <div>
-                <div class="font-semibold text-white mb-0.5">Adres</div>
-                <div class="text-slate-400 text-sm">Mega Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
-              <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">⏰</div>
-              <div>
-                <div class="font-semibold text-white mb-0.5">Çalışma Saatleri</div>
-                <div class="text-slate-400 text-sm">Pazartesi – Cumartesi · 08:30 – 19:00</div>
-                <div class="text-red-400 text-xs font-medium mt-1">Pazar günleri kapalı</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
-              <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📞</div>
-              <div>
-                <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
-                <div class="flex flex-col gap-2">
-  <a href="tel:05326213429" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
-    <span class="text-slate-300 font-semibold group-hover:text-white">Ali Kala</span>
-    <span class="text-slate-500 hidden sm:inline">•</span>
-    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0532 621 34 29</span>
-  </a>
+<section class="bg-slate-950 text-white py-14 md:py-20 border-t border-slate-800 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(185,28,28,0.16),transparent_35%)] pointer-events-none"></div>
 
-  <a href="tel:05058586591" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
-    <span class="text-slate-300 font-semibold group-hover:text-white">Bünyamin Kala</span>
-    <span class="text-slate-500 hidden sm:inline">•</span>
-    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0505 858 65 91</span>
-  </a>
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+      
+      <div class="reveal">
+        <span class="text-xs font-bold tracking-widest uppercase text-amber-400 mb-3 block">
+          Ulaşın
+        </span>
 
-  <a href="tel:05077276716" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
-    <span class="text-slate-300 font-semibold group-hover:text-white">Yusuf Kala</span>
-    <span class="text-slate-500 hidden sm:inline">•</span>
-    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0507 727 67 16</span>
-  </a>
-</div>
+        <h2 class="font-display text-3xl md:text-5xl font-black tracking-tight mb-4">
+          İletişim Bilgileri
+        </h2>
+
+        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-7 max-w-xl">
+          Randevu, yol tarifi veya araç arızası hakkında bilgi almak için bize doğrudan ulaşabilirsiniz.
+        </p>
+
+        <div class="space-y-4">
+          
+          <div class="group flex gap-4 p-5 bg-slate-900/80 border border-slate-800 rounded-3xl hover:border-red-800/70 transition-all">
+            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-xl group-hover:bg-red-900/30 transition-colors">
+              📍
+            </div>
+            <div>
+              <div class="text-white font-bold mb-1">Adres</div>
+              <a
+                href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
+                target="_blank"
+                class="text-slate-400 hover:text-amber-300 transition-colors text-sm md:text-base leading-relaxed">
+                Mega Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara
+              </a>
+            </div>
+          </div>
+
+          <div class="group flex gap-4 p-5 bg-slate-900/80 border border-slate-800 rounded-3xl hover:border-red-800/70 transition-all">
+            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-xl group-hover:bg-red-900/30 transition-colors">
+              ⏰
+            </div>
+            <div>
+              <div class="text-white font-bold mb-1">Çalışma Saatleri</div>
+              <div class="text-slate-400 text-sm md:text-base">
+                Pazartesi – Cumartesi · 08:30 – 19:00
+              </div>
+              <div class="inline-flex items-center gap-2 mt-2 text-xs font-semibold text-red-300 bg-red-950/40 border border-red-900/60 px-2.5 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                Pazar günleri kapalı
               </div>
             </div>
           </div>
-        </div>
-        <div class="w-full h-72 bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700 reveal">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.570177466949!2d32.719895799999996!3d39.9286341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347ee37df85e5%3A0x41d15ac7bb58e9b!2zTWVnYSDFnmHFn21heg!5e0!3m2!1str!2str!4v1779471948767!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div class="group p-5 bg-slate-900/80 border border-slate-800 rounded-3xl hover:border-red-800/70 transition-all">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-xl group-hover:bg-red-900/30 transition-colors">
+                📞
+              </div>
+
+              <div class="flex-1 min-w-0">
+                <div class="text-white font-bold mb-3">Telefon Numaraları</div>
+
+                <div class="divide-y divide-slate-800/80">
+                  <a href="tel:05326213429" class="flex items-center justify-between gap-4 py-2.5 first:pt-0 group/phone">
+                    <span class="text-slate-400 text-sm">Ali Kala</span>
+                    <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
+                      0532 621 34 29
+                    </span>
+                  </a>
+
+                  <a href="tel:05058586591" class="flex items-center justify-between gap-4 py-2.5 group/phone">
+                    <span class="text-slate-400 text-sm">Bünyamin Kala</span>
+                    <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
+                      0505 858 65 91
+                    </span>
+                  </a>
+
+                  <a href="tel:05077276716" class="flex items-center justify-between gap-4 py-2.5 last:pb-0 group/phone">
+                    <span class="text-slate-400 text-sm">Yusuf Kala</span>
+                    <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
+                      0507 727 67 16
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
+
+      <div class="reveal">
+        <div class="h-full min-h-[320px] md:min-h-[520px] bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl relative">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.570177466949!2d32.719895799999996!3d39.9286341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347ee37df85e5%3A0x41d15ac7bb58e9b!2zTWVnYSDFnmHFn21heg!5e0!3m2!1str!2str!4v1779471948767!5m2!1str!2str"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <a
+            href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
+            target="_blank"
+            class="absolute bottom-4 left-4 right-4 md:left-5 md:right-auto inline-flex items-center justify-center gap-2 bg-slate-950/90 backdrop-blur border border-slate-700 text-white px-5 py-3 rounded-2xl text-sm font-bold hover:bg-red-700 hover:border-red-600 transition-all">
+            📍 Google Haritalar’da Aç
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800 text-sm">
       <div class="space-y-2">
