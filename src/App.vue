@@ -559,11 +559,25 @@ onUnmounted(() => {
               <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📞</div>
               <div>
                 <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
-                <div class="flex flex-col gap-1.5">
-                  <a href="tel:05326213429" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
-                  <a href="tel:05058586591" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
-                  <a href="tel:05077276716" class="text-white hover:text-red-400 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
-                </div>
+                <div class="flex flex-col gap-2">
+  <a href="tel:05326213429" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
+    <span class="text-slate-300 font-semibold group-hover:text-white">Ali Kala</span>
+    <span class="text-slate-500 hidden sm:inline">•</span>
+    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0532 621 34 29</span>
+  </a>
+
+  <a href="tel:05058586591" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
+    <span class="text-slate-300 font-semibold group-hover:text-white">Bünyamin Kala</span>
+    <span class="text-slate-500 hidden sm:inline">•</span>
+    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0505 858 65 91</span>
+  </a>
+
+  <a href="tel:05077276716" class="group flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm transition-colors">
+    <span class="text-slate-300 font-semibold group-hover:text-white">Yusuf Kala</span>
+    <span class="text-slate-500 hidden sm:inline">•</span>
+    <span class="text-red-400 font-bold tracking-wide group-hover:text-red-300">0507 727 67 16</span>
+  </a>
+</div>
               </div>
             </div>
           </div>
