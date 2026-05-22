@@ -581,7 +581,7 @@ onUnmounted(() => {
         <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
       </div>
     </footer>
-    <div class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-3 text-center text-white font-bold text-xs shadow-2xl z-50 safe-area-bottom">
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-3 text-center text-white font-bold text-xs shadow-2xl z-50 pb-safe">
       <a href="tel:05326213429" class="py-3.5 border-r border-slate-800 flex flex-col items-center justify-center gap-1 active:bg-slate-900 transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
         Hemen Ara
@@ -636,7 +636,14 @@ onUnmounted(() => {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-  body { font-family: 'DM Sans', sans-serif; }
+  html,
+body {
+  background: #020617;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
   .font-display { font-family: 'Syne', sans-serif; }
 
   /* Scroll reveal */
@@ -661,4 +668,7 @@ onUnmounted(() => {
     pointer-events: none;
     z-index: 0;
   }
+  .pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
 </style>
