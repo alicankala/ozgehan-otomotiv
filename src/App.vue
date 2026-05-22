@@ -547,7 +547,7 @@ onUnmounted(() => {
               <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📍</div>
               <div>
                 <div class="font-semibold text-white mb-0.5">Adres</div>
-                <div class="text-slate-400 text-sm">Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara</div>
+                <div class="text-slate-400 text-sm">Mega Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara</div>
               </div>
             </div>
             <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
@@ -576,7 +576,7 @@ onUnmounted(() => {
     <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800 text-sm">
       <div class="space-y-2">
         <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
-        <p>Şaşmaz Oto Sanayi Sitesi / Ankara</p>
+        <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
         <p><a href="tel:05326213429" class="hover:text-white transition-colors">📞 0532 621 34 29</a></p>
         <p class="text-xs opacity-50 pt-2">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
       </div>
