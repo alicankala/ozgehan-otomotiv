@@ -536,8 +536,7 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-
-    <section class="bg-slate-900 text-white py-16 border-t-4 border-red-700">
+<section class="bg-slate-900 text-white py-16 border-t-4 border-red-700">
       <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div class="reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-400 mb-3 block">Ulaşın</span>
@@ -561,14 +560,13 @@ onUnmounted(() => {
             <div class="flex items-start gap-4 p-4 bg-slate-950/50 rounded-2xl border border-slate-800">
               <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center shrink-0 text-lg">📞</div>
               <div>
-                <div>
-  <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
-  <div class="flex flex-col gap-1.5">
-    <a href="tel:05326213429" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
-    <a href="tel:05058586591" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
-    <a href="tel:05077276716" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
-  </div>
-</div>
+                <div class="font-semibold text-white mb-1.5">Telefon Numaraları</div>
+                <div class="flex flex-col gap-1.5">
+                  <a href="tel:05326213429" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Ali Kala: 0532 621 34 29</a>
+                  <a href="tel:05058586591" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Bünyamin Kala: 0505 858 65 91</a>
+                  <a href="tel:05077276716" class="text-red-400 hover:text-red-300 text-sm font-medium transition-colors">Yusuf Kala: 0507 727 67 16</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -579,13 +577,12 @@ onUnmounted(() => {
     </section>
 
     <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800 text-sm">
-  <div class="space-y-2">
-    <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
-    <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
-    <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
-  </div>
-</footer>
-
+      <div class="space-y-2">
+        <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
+        <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
+        <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
     <div class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-3 text-center text-white font-bold text-xs shadow-2xl z-50 safe-area-bottom">
       <a href="tel:05326213429" class="py-3.5 border-r border-slate-800 flex flex-col items-center justify-center gap-1 active:bg-slate-900 transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
