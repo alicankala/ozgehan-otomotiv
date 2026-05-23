@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import is1 from './assets/is-1.jpeg'
 import is2 from './assets/is-2.jpeg'
 import is3 from './assets/is-3.jpeg'
-import is4 from './assets/is-4.jpeg'g
+import is4 from './assets/is-4.jpeg'
 if ('scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual'
 }
