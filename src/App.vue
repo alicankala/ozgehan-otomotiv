@@ -305,7 +305,7 @@ window.removeEventListener('resize', updateNavArrows)
   />
 </div>
 
-        <div class="font-display text-[20px] sm:text-2xl md:text-3xl font-black uppercase tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
+        <div class="font-display text-[23px] sm:text-2xl md:text-3xl font-black uppercase tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
           <span class="text-white">Özgehan</span>
           <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
         </div>
