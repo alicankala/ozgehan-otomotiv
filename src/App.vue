@@ -272,9 +272,9 @@ onUnmounted(() => {
 <nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-3 md:px-5">
     <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2">
-      <a href="#anasayfa" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
-        Anasayfa
-      </a>
+      <a href="/" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+  Anasayfa
+</a>
 
       <a href="#farkimiz" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Farkımız
