@@ -27,7 +27,18 @@ const updateNavArrows = () => {
   showNavLeft.value = el.scrollLeft > 8
   showNavRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 8
 }
+const showScrollTop = ref(false)
 
+const handleScrollTopButton = () => {
+  showScrollTop.value = window.scrollY > 700
+}
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
 const scrollNav = (direction) => {
   const el = navScrollRef.value
   if (!el) return
@@ -248,6 +259,7 @@ onMounted(() => {
   checkIsOpen()
   timeCheckInterval = setInterval(checkIsOpen, 60000)
   window.addEventListener('keydown', handleLightboxKeydown)
+    window.addEventListener('scroll', handleScrollTopButton)
     setTimeout(updateNavArrows, 100)
   window.addEventListener('resize', updateNavArrows)
 
@@ -271,6 +283,7 @@ onUnmounted(() => {
   if (reviewTimer) clearInterval(reviewTimer)
   if (timeCheckInterval) clearInterval(timeCheckInterval)
   window.removeEventListener('keydown', handleLightboxKeydown)
+window.removeEventListener('scroll', handleScrollTopButton)
 window.removeEventListener('resize', updateNavArrows)
   if (observer) observer.disconnect()
 })
@@ -824,6 +837,14 @@ window.removeEventListener('resize', updateNavArrows)
     </div>
 
     <Teleport to="body">
+      <button
+  v-show="showScrollTop"
+  type="button"
+  @click="scrollToTop"
+  aria-label="En üste dön"
+  class="fixed right-4 bottom-24 md:bottom-6 z-40 w-11 h-11 rounded-full bg-slate-950 text-white border border-slate-700 shadow-2xl flex items-center justify-center hover:bg-red-700 hover:border-red-600 active:scale-95 transition-all cursor-pointer">
+  ↑
+</button>
   <div v-if="selectedImage"
      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm cursor-pointer"
      @click="closeLightbox"
