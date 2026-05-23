@@ -295,11 +295,11 @@ window.removeEventListener('resize', updateNavArrows)
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
       <div class="flex items-center justify-center gap-2">
-        <div class="hidden md:flex md:w-11 md:h-11 items-center justify-center shrink-0">
+        <div class="hidden md:flex md:w-14 md:h-14 items-center justify-center shrink-0">
   <img
     src="/logo.png"
     alt="Özgehan Otomotiv Logo"
-    class="w-full h-full object-contain"
+    class="w-full h-full object-contain scale-125 -translate-x-0.5"
   />
 </div>
 
