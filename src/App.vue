@@ -392,11 +392,10 @@ window.removeEventListener('resize', updateNavArrows)
 
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
-      <img
-  src="/logo-full.png"
-  alt="Özgehan Otomotiv"
-  class="soft-fade-up h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain mb-5 md:mb-6 mx-auto md:mx-0"
-/>
+      <h1 class="soft-fade-up ...">
+  Aracınız<br/>
+  <span class="text-red-700 relative inline-block font-bold">
+    Emin Ellerde
       <h1 class="soft-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
