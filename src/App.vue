@@ -781,12 +781,23 @@ body {
   .font-display { font-family: 'Syne', sans-serif; }
 
   /* Scroll reveal */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.revealed { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
+/* Scroll reveal - güvenli görünür yapı */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1,
+.reveal-delay-2,
+.reveal-delay-3,
+.reveal-delay-4 {
+  transition-delay: 0s;
+}
 
   /* Review carousel transition */
   .review-enter-active, .review-leave-active { transition: opacity 0.4s ease, transform 0.4s ease; }
