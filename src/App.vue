@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import is1 from './assets/is-1.jpeg'
 import is2 from './assets/is-2.jpeg'
 import is3 from './assets/is-3.jpeg'
+import is4 from './assets/is-4.jpeg'g
 if ('scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual'
 }
@@ -583,10 +584,10 @@ window.removeEventListener('resize', updateNavArrows)
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Ustalığımız ve Atölyemiz</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           <div v-for="(img, i) in galleryImages" :key="i"
      class="reveal aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-red-400 hover:shadow-xl transition-all cursor-pointer group"
-     :class="[`reveal-delay-${i+1}`, i === 2 ? 'col-span-2 md:col-span-1' : '']"
+     :class="`reveal-delay-${Math.min(i + 1, 4)}`"
      @click="openLightbox(i)">
             <div class="relative w-full h-full overflow-hidden">
               <img :src="img" loading="lazy" :alt="`Atölye Fotoğrafı ${i+1}`" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
