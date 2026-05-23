@@ -5,6 +5,9 @@ import heroFoto from './assets/hero-foto.jpeg'
 import is1 from './assets/is-1.jpg.jpeg'
 import is2 from './assets/is-2.jpg.jpeg'
 import is3 from './assets/is-3.jpg.jpeg'
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual'
+}
 const scrollToSection = (id) => {
   document.querySelector(id)?.scrollIntoView({
     behavior: 'smooth',
@@ -222,6 +225,9 @@ onMounted(() => {
   checkIsOpen()
   timeCheckInterval = setInterval(checkIsOpen, 60000)
   window.addEventListener('keydown', handleLightboxKeydown)
+
+  window.history.replaceState(null, '', window.location.pathname)
+  window.scrollTo(0, 0)
 
   // Scroll reveal
   const els = document.querySelectorAll('.reveal')
