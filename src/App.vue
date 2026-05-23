@@ -30,7 +30,7 @@ const updateNavArrows = () => {
 const showScrollTop = ref(false)
 
 const handleScrollTopButton = () => {
-  showScrollTop.value = window.scrollY > 700
+  showScrollTop.value = window.scrollY > 250
 }
 
 const scrollToTop = () => {
