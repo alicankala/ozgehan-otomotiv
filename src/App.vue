@@ -50,7 +50,7 @@ const scrollNav = (direction) => {
   setTimeout(updateNavArrows, 250)
 }
 // Lightbox
-const galleryImages = [is1, is2, is3]
+const galleryImages = [is1, is2, is3, is4]
 const selectedImage = ref(null)
 const selectedImageIndex = ref(0)
 const lightboxTouchStartX = ref(null)
