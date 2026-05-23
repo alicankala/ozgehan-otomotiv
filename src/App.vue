@@ -293,10 +293,10 @@ window.removeEventListener('resize', updateNavArrows)
 
    <div class="sticky top-0 z-50 bg-slate-950 shadow-2xl">
   <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5">
-        <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
+        <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center w-full overflow-visible">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
-      <div class="flex items-center justify-center gap-2">
+      <div class="flex items-center justify-center gap-1 md:gap-2 max-w-full overflow-visible">
         <div class="hidden md:flex md:w-14 md:h-14 items-center justify-center shrink-0">
   <img
     src="/logo.png"
@@ -305,7 +305,7 @@ window.removeEventListener('resize', updateNavArrows)
   />
 </div>
 
-        <div class="font-display text-[23px] sm:text-2xl md:text-3xl font-black uppercase tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
+        <div class="font-display text-[clamp(16px,4.9vw,21px)] sm:text-2xl md:text-3xl font-black uppercase tracking-[-0.06em] md:tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
           <span class="text-white">Özgehan</span>
           <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
         </div>
