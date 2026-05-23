@@ -291,7 +291,7 @@ window.removeEventListener('resize', updateNavArrows)
 <template>
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
-    <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
+    <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50 border-b border-slate-950">
   <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
