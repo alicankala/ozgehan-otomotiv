@@ -295,20 +295,13 @@ window.removeEventListener('resize', updateNavArrows)
     <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
   <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
-    <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
-      <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center">
   <img
     src="/logo-full.png"
     alt="Özgehan Otomotiv"
     class="h-10 md:h-14 w-auto object-contain"
   />
 </div>
-
-        <div class="font-display text-[20px] sm:text-2xl md:text-3xl font-black uppercase tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
-          <span class="text-white">Özgehan</span>
-          <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
-        </div>
-      </div>
 
       <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center md:text-left mt-0.5 md:mt-0 md:ml-1 md:pt-1">
         1974’TEN BERİ
