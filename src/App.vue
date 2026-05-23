@@ -321,13 +321,13 @@ window.removeEventListener('resize', updateNavArrows)
 
   </div>
 </header>
-<nav class="sticky top-[72px] md:top-[84px] z-40 bg-white/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/70 md:border-none">
+<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950 border-b border-slate-800">
   <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
     <div class="relative mx-auto md:w-fit">
       <div
         ref="navScrollRef"
         @scroll="updateNavArrows"
-        class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-2xl md:rounded-full bg-slate-950/95 border border-slate-800 shadow-xl px-3 py-2 pl-3 pr-8 md:px-3"
+        class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-xl md:rounded-full bg-slate-900/80 border border-slate-800 px-2 py-1.5 pl-2 pr-8 md:px-3"
       >
         <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
           Anasayfa
