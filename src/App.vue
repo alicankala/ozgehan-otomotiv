@@ -317,7 +317,7 @@ window.removeEventListener('resize', updateNavArrows)
     </div>
 
     <div class="hidden md:flex items-center gap-4">
-      <a href="tel:05326213429" class="font-bold text-base bg-slate-900 border border-red-700/60 px-5 py-2.5 rounded-full hover:bg-red-700 hover:border-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
+      <a href="tel:05326213429" class="font-bold text-base bg-slate-800 border border-red-600/70 px-5 py-2.5 rounded-full hover:bg-red-700 hover:border-red-500 transition-all flex items-center gap-2 shadow-lg whitespace-nowrap hover:scale-105 active:scale-95">
   <svg class="w-4 h-4 shrink-0 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
   </svg>
