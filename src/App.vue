@@ -291,8 +291,8 @@ window.removeEventListener('resize', updateNavArrows)
 <template>
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
-    <div class="sticky top-0 z-50 bg-slate-950">
-      <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl">
+   <div class="sticky top-0 z-50 bg-slate-950 shadow-2xl">
+  <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5">
         <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
@@ -325,7 +325,7 @@ window.removeEventListener('resize', updateNavArrows)
 
         </div>
       </header>
-      <nav class="bg-slate-900">
+      <nav class="bg-slate-900 -mt-px">
         <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
           <div class="relative mx-auto md:w-fit">
             <div
@@ -549,8 +549,9 @@ window.removeEventListener('resize', updateNavArrows)
       </div>
     </div>
   </div>
-</section>np
-    <section id="farkimiz" class="py-12 md:py-20 bg-slate-900 border-y border-slate-800 scroll-mt-32 md:scroll-mt-40">
+</section>
+
+<section id="farkimiz" class="py-12 md:py-20 bg-slate-900 border-y border-slate-800 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
