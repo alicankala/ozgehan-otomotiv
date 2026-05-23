@@ -1,7 +1,5 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
-import heroFoto from './assets/hero-foto.jpeg'
 import is1 from './assets/is-1.jpg.jpeg'
 import is2 from './assets/is-2.jpg.jpeg'
 import is3 from './assets/is-3.jpg.jpeg'
