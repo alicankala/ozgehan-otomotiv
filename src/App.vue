@@ -16,6 +16,29 @@ const scrollToSection = (id) => {
 
   window.history.replaceState(null, '', window.location.pathname)
 }
+const navScrollRef = ref(null)
+const showNavLeft = ref(false)
+const showNavRight = ref(true)
+
+const updateNavArrows = () => {
+  const el = navScrollRef.value
+  if (!el) return
+
+  showNavLeft.value = el.scrollLeft > 8
+  showNavRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 8
+}
+
+const scrollNav = (direction) => {
+  const el = navScrollRef.value
+  if (!el) return
+
+  el.scrollBy({
+    left: direction * 160,
+    behavior: 'smooth'
+  })
+
+  setTimeout(updateNavArrows, 250)
+}
 // Lightbox
 const galleryImages = [is1, is2, is3]
 const selectedImage = ref(null)
@@ -225,6 +248,8 @@ onMounted(() => {
   checkIsOpen()
   timeCheckInterval = setInterval(checkIsOpen, 60000)
   window.addEventListener('keydown', handleLightboxKeydown)
+    setTimeout(updateNavArrows, 100)
+  window.addEventListener('resize', updateNavArrows)
 
   window.history.replaceState(null, '', window.location.pathname)
   window.scrollTo(0, 0)
@@ -246,6 +271,7 @@ onUnmounted(() => {
   if (reviewTimer) clearInterval(reviewTimer)
   if (timeCheckInterval) clearInterval(timeCheckInterval)
   window.removeEventListener('keydown', handleLightboxKeydown)
+window.removeEventListener('resize', updateNavArrows)
   if (observer) observer.disconnect()
 })
 </script>
@@ -284,7 +310,7 @@ onUnmounted(() => {
 </header>
 <nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-3 md:px-5 relative">
-  <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 pr-14 md:pr-0">
+  <div ref="navScrollRef" @scroll="updateNavArrows" class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 px-10 md:px-0">
       <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
         Anasayfa
       </button>
@@ -317,10 +343,23 @@ onUnmounted(() => {
         İletişim
       </button>
     </div>
+    <button
+  v-show="showNavLeft"
+  type="button"
+  @click="scrollNav(-1)"
+  aria-label="Menüyü sola kaydır"
+  class="md:hidden absolute top-0 left-0 h-full w-10 z-20 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent flex items-center justify-start pl-2 text-white text-2xl font-black">
+  ‹
+</button>
 
-    <div class="pointer-events-none md:hidden absolute top-0 right-0 h-full w-16 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-3">
-      <span class="text-white text-2xl font-black animate-pulse">›</span>
-    </div>
+<button
+  v-show="showNavRight"
+  type="button"
+  @click="scrollNav(1)"
+  aria-label="Menüyü sağa kaydır"
+  class="md:hidden absolute top-0 right-0 h-full w-10 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-2 text-white text-2xl font-black">
+  ›
+</button>
   </div>
 </nav>
 
