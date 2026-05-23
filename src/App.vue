@@ -304,12 +304,7 @@ onUnmounted(() => {
         </div>
 
         <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
-          <img
-  :src="heroFoto"
-  alt="Ankara Mega Şaşmaz Özgehan Otomotiv motor mekanik ve oto bakım servisi"
-  loading="eager"
-  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-/>
+          <img :src="heroFoto" alt="Ankara Mega Şaşmaz Özgehan Otomotiv motor mekanik ve oto bakım servisi" loading="eager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
   <span
     :class="isOpen ? 'w-2 h-2 bg-emerald-500 rounded-full animate-pulse' : 'w-2 h-2 bg-red-500 rounded-full'"
   ></span>
