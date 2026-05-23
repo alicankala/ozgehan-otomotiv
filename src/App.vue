@@ -5,7 +5,14 @@ import heroFoto from './assets/hero-foto.jpeg'
 import is1 from './assets/is-1.jpg.jpeg'
 import is2 from './assets/is-2.jpg.jpeg'
 import is3 from './assets/is-3.jpg.jpeg'
+const scrollToSection = (id) => {
+  document.querySelector(id)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
 
+  window.history.replaceState(null, '', window.location.pathname)
+}
 // Lightbox
 const galleryImages = [is1, is2, is3]
 const selectedImage = ref(null)
@@ -272,37 +279,37 @@ onUnmounted(() => {
 <nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-3 md:px-5">
     <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2">
-      <a href="/" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
-  Anasayfa
-</a>
+      <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Anasayfa
+      </button>
 
-      <a href="#farkimiz" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Farkımız
-      </a>
+      </button>
 
-      <a href="#hizmetler" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Hizmetler
-      </a>
+      </button>
 
-      <a href="#hakkimizda" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Hakkımızda
-      </a>
+      </button>
 
-      <a href="#atolye" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Atölye
-      </a>
+      </button>
 
-      <a href="#yorumlar" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Yorumlar
-      </a>
+      </button>
 
-      <a href="#randevu" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         Randevu
-      </a>
+      </button>
 
-      <a href="#iletisim" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+      <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
         İletişim
-      </a>
+      </button>
     </div>
   </div>
 </nav>
