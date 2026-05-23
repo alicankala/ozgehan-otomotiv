@@ -299,7 +299,7 @@ window.removeEventListener('resize', updateNavArrows)
   <img
     src="/logo.png"
     alt="Özgehan Otomotiv Logo"
-    class="w-full h-full object-contain scale-125 -translate-x-0.5"
+    class="w-full h-full object-contain scale-125"
   />
 </div>
 
