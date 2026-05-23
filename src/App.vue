@@ -308,7 +308,6 @@ onUnmounted(() => {
   :src="heroFoto"
   alt="Ankara Mega Şaşmaz Özgehan Otomotiv motor mekanik ve oto bakım servisi"
   loading="eager"
-  fetchpriority="high"
   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
 />
   <span
