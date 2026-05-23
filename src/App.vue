@@ -333,36 +333,36 @@ window.removeEventListener('resize', updateNavArrows)
         class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-xl md:rounded-full bg-slate-950/70 border border-slate-700 px-2 py-1.5 pl-2 pr-8 md:px-3"
       >
         <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Anasayfa
-        </button>
+  Anasayfa
+</button>
 
-        <button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Farkımız
-        </button>
+<button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Hizmetler
+</button>
 
-        <button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Hizmetler
-        </button>
+<button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Farkımız
+</button>
 
-        <button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Hakkımızda
-        </button>
+<button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Hakkımızda
+</button>
 
-        <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Atölye
-        </button>
+<button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Atölye
+</button>
 
-        <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Yorumlar
-        </button>
+<button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Yorumlar
+</button>
 
-        <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          Randevu
-        </button>
+<button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  Randevu
+</button>
 
-        <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-          İletişim
-        </button>
+<button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+  İletişim
+</button>
       </div>
 
       <button
@@ -459,51 +459,7 @@ window.removeEventListener('resize', updateNavArrows)
     </div>
   </div>
 </section>
-    <section id="farkimiz" class="py-12 md:py-20 bg-slate-900 border-y border-slate-800 scroll-mt-32 md:scroll-mt-40">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-8 md:mb-12 reveal">
-          <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
-          <h2 class="font-display text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
-          <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Aracınızı güvenle teslim edebilmeniz için kaliteden ve şeffaflıktan ödün vermiyoruz.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          <div class="reveal reveal-delay-1 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Dürüst Fiyatlandırma</h3>
-            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Aracınıza yalnızca gerçekten ihtiyaç duyulan işlemler uygulanır.</p>
-          </div>
-
-          <div class="reveal reveal-delay-2 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-            </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Kaliteli Parça</h3>
-            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Orijinal ve OEM onaylı yedek parçalarla aracınızın ömrü uzatılır.</p>
-          </div>
-
-          <div class="reveal reveal-delay-3 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Garantili İşçilik</h3>
-            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Her mekanik işlem ve parça değişimi usta garantimiz altındadır.</p>
-          </div>
-
-          <div class="reveal reveal-delay-4 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
-            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Hızlı Teslimat</h3>
-            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Zamanınızın değerini biliyor, aracınızı söz verilen sürede teslim ediyoruz.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="hizmetler" class="py-12 md:py-24 bg-slate-100 border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
+ <section id="hizmetler" class="py-12 md:py-24 bg-slate-100 border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-8 md:mb-12 reveal">
       <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Uzman Kadro</span>
@@ -591,7 +547,52 @@ window.removeEventListener('resize', updateNavArrows)
       </div>
     </div>
   </div>
-</section>
+</section>np
+    <section id="farkimiz" class="py-12 md:py-20 bg-slate-900 border-y border-slate-800 scroll-mt-32 md:scroll-mt-40">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-8 md:mb-12 reveal">
+          <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
+          <h2 class="font-display text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Aracınızı güvenle teslim edebilmeniz için kaliteden ve şeffaflıktan ödün vermiyoruz.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+          <div class="reveal reveal-delay-1 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Dürüst Fiyatlandırma</h3>
+            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Aracınıza yalnızca gerçekten ihtiyaç duyulan işlemler uygulanır.</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Kaliteli Parça</h3>
+            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Orijinal ve OEM onaylı yedek parçalarla aracınızın ömrü uzatılır.</p>
+          </div>
+
+          <div class="reveal reveal-delay-3 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Garantili İşçilik</h3>
+            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Her mekanik işlem ve parça değişimi usta garantimiz altındadır.</p>
+          </div>
+
+          <div class="reveal reveal-delay-4 bg-slate-950 p-4 md:p-6 rounded-2xl border border-slate-800 text-center hover:border-red-600 hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 md:w-12 md:h-12 bg-red-700/10 border border-red-700/30 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-white font-bold text-sm md:text-base mb-1.5 md:mb-2">Hızlı Teslimat</h3>
+            <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Zamanınızın değerini biliyor, aracınızı söz verilen sürede teslim ediyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
 
     <section id="hakkimizda" class="py-16 md:py-20 bg-white border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-4xl mx-auto px-4">
