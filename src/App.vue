@@ -303,7 +303,7 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
+        <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-200 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
           <img :src="heroFoto" alt="Ankara Mega Şaşmaz Özgehan Otomotiv motor mekanik ve oto bakım servisi" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
           <div
   class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold rounded-full px-3 py-2 shadow-lg backdrop-blur border"
