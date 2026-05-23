@@ -317,7 +317,26 @@ onUnmounted(() => {
         </div>
       </div>
     </main>
+<section class="bg-slate-950 border-y border-slate-800 py-4 md:py-5">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-3 gap-3 text-center">
+      <div>
+        <div class="text-amber-400 font-black text-sm md:text-xl tracking-tight">1974’ten Beri</div>
+        <div class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Sanayi Tecrübesi</div>
+      </div>
 
+      <div class="border-x border-slate-800">
+        <div class="text-white font-black text-sm md:text-xl tracking-tight">3 Uzman Usta</div>
+        <div class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Çekirdek Kadro</div>
+      </div>
+
+      <div>
+        <div class="text-white font-black text-sm md:text-xl tracking-tight">Tüm Markalar</div>
+        <div class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Motor Mekanik</div>
+      </div>
+    </div>
+  </div>
+</section>
     <section class="py-12 md:py-20 bg-slate-900 border-y border-slate-800">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
