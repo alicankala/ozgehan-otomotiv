@@ -10,6 +10,7 @@ import is3 from './assets/is-3.jpg.jpeg'
 const galleryImages = [is1, is2, is3]
 const selectedImage = ref(null)
 const selectedImageIndex = ref(0)
+const lightboxTouchStartX = ref(null)
 
 const openLightbox = (index) => {
   selectedImageIndex.value = index
@@ -29,7 +30,42 @@ const prevImage = () => {
   selectedImageIndex.value = (selectedImageIndex.value - 1 + galleryImages.length) % galleryImages.length
   selectedImage.value = galleryImages[selectedImageIndex.value]
 }
+const handleLightboxKeydown = (event) => {
+  if (!selectedImage.value) return
 
+  if (event.key === 'Escape') {
+    closeLightbox()
+  }
+
+  if (event.key === 'ArrowRight') {
+    nextImage()
+  }
+
+  if (event.key === 'ArrowLeft') {
+    prevImage()
+  }
+}
+
+const handleLightboxTouchStart = (event) => {
+  lightboxTouchStartX.value = event.changedTouches[0].clientX
+}
+
+const handleLightboxTouchEnd = (event) => {
+  if (lightboxTouchStartX.value === null) return
+
+  const touchEndX = event.changedTouches[0].clientX
+  const swipeDistance = lightboxTouchStartX.value - touchEndX
+
+  if (Math.abs(swipeDistance) > 50) {
+    if (swipeDistance > 0) {
+      nextImage()
+    } else {
+      prevImage()
+    }
+  }
+
+  lightboxTouchStartX.value = null
+}
 // Form
 const name = ref('')
 const phone = ref('')
@@ -178,6 +214,7 @@ onMounted(() => {
   startReviewTimer()
   checkIsOpen()
   timeCheckInterval = setInterval(checkIsOpen, 60000)
+  window.addEventListener('keydown', handleLightboxKeydown)
 
   // Scroll reveal
   const els = document.querySelectorAll('.reveal')
@@ -195,6 +232,7 @@ onMounted(() => {
 onUnmounted(() => {
   if (reviewTimer) clearInterval(reviewTimer)
   if (timeCheckInterval) clearInterval(timeCheckInterval)
+  window.removeEventListener('keydown', handleLightboxKeydown)
   if (observer) observer.disconnect()
 })
 </script>
@@ -675,8 +713,10 @@ onUnmounted(() => {
 
     <Teleport to="body">
   <div v-if="selectedImage"
-       class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm cursor-pointer"
-       @click="closeLightbox">
+     class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm cursor-pointer"
+     @click="closeLightbox"
+     @touchstart="handleLightboxTouchStart"
+     @touchend="handleLightboxTouchEnd">
 
     <button
       class="absolute top-4 right-6 text-white/70 hover:text-white text-4xl hover:scale-110 transition-all leading-none z-20"
