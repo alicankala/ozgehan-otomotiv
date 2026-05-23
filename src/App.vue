@@ -295,18 +295,17 @@ window.removeEventListener('resize', updateNavArrows)
     <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
   <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
-    <div class="flex items-center justify-center">
+    <div class="flex flex-col items-center justify-center">
   <img
     src="/logo-full.png"
     alt="Özgehan Otomotiv"
-    class="h-10 md:h-14 w-auto object-contain"
+    class="h-12 md:h-16 w-auto object-contain"
   />
-</div>
 
-      <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center md:text-left mt-0.5 md:mt-0 md:ml-1 md:pt-1">
-        1974’TEN BERİ
-      </div>
-    </div>
+  <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center mt-1">
+    1974’TEN BERİ
+  </div>
+</div>
 
     <div class="hidden md:flex items-center gap-4">
       <a href="tel:05326213429" class="font-bold text-base bg-red-700 px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
