@@ -321,58 +321,65 @@ window.removeEventListener('resize', updateNavArrows)
 
   </div>
 </header>
-<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
-  <div class="max-w-7xl mx-auto px-3 md:px-5 relative">
-  <div ref="navScrollRef" @scroll="updateNavArrows" class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 pl-3 pr-8 md:px-0">
-      <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Anasayfa
+<nav class="sticky top-[72px] md:top-[84px] z-40 bg-white/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/70 md:border-none">
+  <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
+    <div class="relative mx-auto md:w-fit">
+      <div
+        ref="navScrollRef"
+        @scroll="updateNavArrows"
+        class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-2xl md:rounded-full bg-slate-950/95 border border-slate-800 shadow-xl px-3 py-2 pl-3 pr-8 md:px-3"
+      >
+        <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Anasayfa
+        </button>
+
+        <button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Farkımız
+        </button>
+
+        <button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Hizmetler
+        </button>
+
+        <button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Hakkımızda
+        </button>
+
+        <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Atölye
+        </button>
+
+        <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Yorumlar
+        </button>
+
+        <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          Randevu
+        </button>
+
+        <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+          İletişim
+        </button>
+      </div>
+
+      <button
+        v-show="showNavRight"
+        type="button"
+        @click="scrollNav(1)"
+        aria-label="Menüyü sağa kaydır"
+        class="md:hidden absolute top-0 right-0 h-full w-10 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-2 text-white text-2xl font-black">
+        ›
       </button>
 
-      <button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Farkımız
-      </button>
-
-      <button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Hizmetler
-      </button>
-
-      <button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Hakkımızda
-      </button>
-
-      <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Atölye
-      </button>
-
-      <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Yorumlar
-      </button>
-
-      <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        Randevu
-      </button>
-
-            <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-        İletişim
+      <button
+        v-show="showNavLeft"
+        type="button"
+        @click="scrollNav(-1)"
+        aria-label="Menüyü sola kaydır"
+        class="md:hidden absolute top-0 left-0 h-full w-10 z-20 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent flex items-center justify-start pl-2 text-white text-2xl font-black">
+        ‹
       </button>
     </div>
-    <button
-  v-show="showNavLeft"
-  type="button"
-  @click="scrollNav(-1)"
-  aria-label="Menüyü sola kaydır"
-  class="md:hidden absolute top-0 left-0 h-full w-10 z-20 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent flex items-center justify-start pl-2 text-white text-2xl font-black">
-  ‹
-</button>
-
-<button
-  v-show="showNavRight"
-  type="button"
-  @click="scrollNav(1)"
-  aria-label="Menüyü sağa kaydır"
-  class="md:hidden absolute top-0 right-0 h-full w-10 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-2 text-white text-2xl font-black">
-  ›
-</button>
   </div>
 </nav>
 
