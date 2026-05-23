@@ -238,7 +238,7 @@ onUnmounted(() => {
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
       
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
+      <h1 class="soft-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
           Emin Ellerde
@@ -246,7 +246,7 @@ onUnmounted(() => {
         </span>
       </h1>
 
-          <p class="text-lg md:text-xl text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-lg font-medium">
+          <p class="soft-fade-up-delay text-lg md:text-xl text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-lg font-medium">
             Profesyonel motor mekanik, periyodik bakım ve arıza tespitinde yılların sanayi tecrübesiyle <strong class="text-slate-900">dürüst ve garantili hizmet.</strong>
           </p>
 
@@ -745,5 +745,23 @@ body {
   }
   .pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
+}
+@keyframes softFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.soft-fade-up {
+  animation: softFadeUp 0.7s ease-out both;
+}
+
+.soft-fade-up-delay {
+  animation: softFadeUp 0.8s ease-out 0.15s both;
 }
 </style>
