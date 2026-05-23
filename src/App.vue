@@ -269,8 +269,45 @@ onUnmounted(() => {
 
   </div>
 </header>
+<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
+  <div class="max-w-7xl mx-auto px-3 md:px-5">
+    <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2">
+      <a href="#anasayfa" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Anasayfa
+      </a>
 
-<main class="bg-white relative overflow-hidden">
+      <a href="#farkimiz" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Farkımız
+      </a>
+
+      <a href="#hizmetler" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Hizmetler
+      </a>
+
+      <a href="#hakkimizda" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Hakkımızda
+      </a>
+
+      <a href="#atolye" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Atölye
+      </a>
+
+      <a href="#yorumlar" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Yorumlar
+      </a>
+
+      <a href="#randevu" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        Randevu
+      </a>
+
+      <a href="#iletisim" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+        İletişim
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main id="anasayfa" class="bg-white relative overflow-hidden scroll-mt-32 md:scroll-mt-40">
   <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
 
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
@@ -337,7 +374,7 @@ onUnmounted(() => {
     </div>
   </div>
 </section>
-    <section class="py-12 md:py-20 bg-slate-900 border-y border-slate-800">
+    <section id="farkimiz" class="py-12 md:py-20 bg-slate-900 border-y border-slate-800 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-500 mb-3 block">Farkımız</span>
@@ -381,7 +418,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-12 md:py-24 bg-slate-100 border-b border-slate-200">
+    <section id="hizmetler" class="py-12 md:py-24 bg-slate-100 border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-12 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Uzman Kadro</span>
@@ -441,7 +478,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 md:py-20 bg-white border-b border-slate-200">
+    <section id="hakkimizda" class="py-16 md:py-20 bg-white border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-4xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal">
           <div class="w-24 h-24 md:w-28 md:h-28 bg-slate-900 text-white rounded-full flex items-center justify-center border-4 border-slate-100 shadow-xl shrink-0">
@@ -456,7 +493,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-slate-100 border-b border-slate-200">
+    <section id="atolye" class="py-16 bg-slate-100 border-b border-slate-200 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-10 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
@@ -480,7 +517,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-white border-b border-slate-100">
+    <section id="yorumlar" class="py-16 bg-white border-b border-slate-100 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-4xl mx-auto px-4">
         <div class="text-center mb-10 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Referanslar</span>
@@ -530,7 +567,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <section id="randevu" class="py-16 bg-slate-900 text-white border-t border-slate-800 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-xl mx-auto px-4">
         <div class="text-center mb-8 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-400 mb-3 block">Randevu & Bilgi</span>
@@ -591,7 +628,7 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-<section class="bg-slate-950 text-white py-14 md:py-20 border-t border-slate-800 relative overflow-hidden">
+<section id="iletisim" class="bg-slate-950 text-white py-14 md:py-20 border-t border-slate-800 relative overflow-hidden scroll-mt-32 md:scroll-mt-40">
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(185,28,28,0.16),transparent_35%)] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 relative z-10">
@@ -833,5 +870,17 @@ body {
 
 .soft-fade-up-delay {
   animation: softFadeUp 0.8s ease-out 0.15s both;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>
