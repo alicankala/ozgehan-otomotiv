@@ -291,8 +291,9 @@ window.removeEventListener('resize', updateNavArrows)
 <template>
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
 
-    <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
+    <div class="sticky top-0 z-50 bg-slate-950">
+      <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
       <div class="flex items-center justify-center gap-2">
@@ -322,69 +323,70 @@ window.removeEventListener('resize', updateNavArrows)
       </a>
     </div>
 
-  </div>
-</header>
-<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
-    <div class="relative mx-auto md:w-fit">
-      <div
-        ref="navScrollRef"
-        @scroll="updateNavArrows"
-        class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-xl md:rounded-full bg-slate-950/70 border border-slate-700 px-2 py-1.5 pl-2 pr-8 md:px-3"
-      >
-        <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Anasayfa
-</button>
+        </div>
+      </header>
+      <nav class="bg-slate-900">
+        <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
+          <div class="relative mx-auto md:w-fit">
+            <div
+              ref="navScrollRef"
+              @scroll="updateNavArrows"
+              class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar rounded-xl md:rounded-full bg-slate-950/70 border border-slate-700 px-2 py-1.5 pl-2 pr-8 md:px-3"
+            >
+              <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Anasayfa
+              </button>
 
-<button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Hizmetler
-</button>
+              <button type="button" @click="scrollToSection('#hizmetler')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Hizmetler
+              </button>
 
-<button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Farkımız
-</button>
+              <button type="button" @click="scrollToSection('#farkimiz')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Farkımız
+              </button>
 
-<button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Hakkımızda
-</button>
+              <button type="button" @click="scrollToSection('#hakkimizda')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Hakkımızda
+              </button>
 
-<button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Atölye
-</button>
+              <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Atölye
+              </button>
 
-<button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Yorumlar
-</button>
+              <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Yorumlar
+              </button>
 
-<button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  Randevu
-</button>
+              <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                Randevu
+              </button>
 
-<button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-  İletişim
-</button>
-      </div>
+              <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+                İletişim
+              </button>
+            </div>
 
-      <button
-        v-show="showNavRight"
-        type="button"
-        @click="scrollNav(1)"
-        aria-label="Menüyü sağa kaydır"
-        class="md:hidden absolute top-0 right-0 h-full w-10 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-2 text-white text-2xl font-black">
-        ›
-      </button>
+            <button
+              v-show="showNavRight"
+              type="button"
+              @click="scrollNav(1)"
+              aria-label="Menüyü sağa kaydır"
+              class="md:hidden absolute top-0 right-0 h-full w-10 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-2 text-white text-2xl font-black">
+              ›
+            </button>
 
-      <button
-        v-show="showNavLeft"
-        type="button"
-        @click="scrollNav(-1)"
-        aria-label="Menüyü sola kaydır"
-        class="md:hidden absolute top-0 left-0 h-full w-10 z-20 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent flex items-center justify-start pl-2 text-white text-2xl font-black">
-        ‹
-      </button>
+            <button
+              v-show="showNavLeft"
+              type="button"
+              @click="scrollNav(-1)"
+              aria-label="Menüyü sola kaydır"
+              class="md:hidden absolute top-0 left-0 h-full w-10 z-20 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent flex items-center justify-start pl-2 text-white text-2xl font-black">
+              ‹
+            </button>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</nav>
 
 <main id="anasayfa" class="bg-white relative overflow-hidden scroll-mt-32 md:scroll-mt-40">
   <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
