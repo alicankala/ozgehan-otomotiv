@@ -297,7 +297,7 @@ window.removeEventListener('resize', updateNavArrows)
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
       <div class="flex items-center justify-center gap-2">
-        <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg md:rounded-xl flex items-center justify-center shrink-0 overflow-hidden bg-white">
+        <div class="hidden md:flex md:w-11 md:h-11 rounded-xl items-center justify-center shrink-0 overflow-hidden bg-white">
   <img
     src="/logo.png"
     alt="Özgehan Otomotiv Logo"
@@ -392,7 +392,11 @@ window.removeEventListener('resize', updateNavArrows)
 
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
-      
+      <img
+  src="/logo-full.png"
+  alt="Özgehan Otomotiv"
+  class="soft-fade-up h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain mb-5 md:mb-6 mx-auto md:mx-0"
+/>
       <h1 class="soft-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
@@ -421,7 +425,13 @@ window.removeEventListener('resize', updateNavArrows)
         </div>
 
         <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-200 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
-          <img :src="heroFoto" alt="Ankara Mega Şaşmaz Özgehan Otomotiv motor mekanik ve oto bakım servisi" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+          <img
+  src="/logo-full.png"
+  alt="Özgehan Otomotiv"
+  loading="eager"
+  fetchpriority="high"
+  class="w-full h-full object-contain p-6 md:p-10 bg-white"
+/>
           <div
   class="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-bold rounded-full px-3 py-2 shadow-lg backdrop-blur border"
   :class="isOpen ? 'text-emerald-700 bg-white/90 border-emerald-200' : 'text-red-700 bg-white/90 border-red-200'"
