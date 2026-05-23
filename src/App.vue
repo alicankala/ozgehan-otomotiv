@@ -310,7 +310,7 @@ window.removeEventListener('resize', updateNavArrows)
 </header>
 <nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-3 md:px-5 relative">
-  <div ref="navScrollRef" @scroll="updateNavArrows" class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 px-10 md:px-0">
+  <div ref="navScrollRef" @scroll="updateNavArrows" class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 pl-3 pr-8 md:px-0">
       <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
         Anasayfa
       </button>
