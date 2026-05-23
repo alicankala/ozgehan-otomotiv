@@ -443,7 +443,7 @@ window.removeEventListener('resize', updateNavArrows)
         </div>
       </div>
     </main>
-<section class="bg-slate-950 border-y border-slate-800 py-4 md:py-5">
+<section class="bg-slate-900 border-y border-slate-800 py-4 md:py-5">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid grid-cols-3 gap-3 text-center">
       <div>
