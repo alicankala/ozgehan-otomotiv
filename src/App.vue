@@ -295,17 +295,22 @@ window.removeEventListener('resize', updateNavArrows)
     <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5 shadow-2xl sticky top-0 z-50 border-b border-slate-800">
   <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
     
-    <div class="flex flex-col items-center justify-center">
-  <img
-    src="/logo-full.png"
-    alt="Özgehan Otomotiv"
-    class="h-12 md:h-16 w-auto object-contain"
-  />
+    <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-8 h-8 md:w-11 md:h-11 bg-red-700 rounded-lg md:rounded-xl flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+        </div>
 
-  <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center mt-1">
-    1974’TEN BERİ
-  </div>
-</div>
+        <div class="font-display text-[20px] sm:text-2xl md:text-3xl font-black uppercase tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
+          <span class="text-white">Özgehan</span>
+          <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
+        </div>
+      </div>
+
+      <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center md:text-left mt-0.5 md:mt-0 md:ml-1 md:pt-1">
+        1974’TEN BERİ
+      </div>
+    </div>
 
     <div class="hidden md:flex items-center gap-4">
       <a href="tel:05326213429" class="font-bold text-base bg-red-700 px-5 py-2.5 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 shadow-inner whitespace-nowrap hover:scale-105 active:scale-95">
