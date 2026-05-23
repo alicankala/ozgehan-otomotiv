@@ -275,7 +275,7 @@ onMounted(() => {
         observer.unobserve(el.target)
       }
     })
-  }, { threshold: 0.12 })
+  }, { threshold: 0 })
   els.forEach(el => observer.observe(el))
 })
 
@@ -902,23 +902,22 @@ body {
   .font-display { font-family: 'Syne', sans-serif; }
 
   /* Scroll reveal */
-/* Scroll reveal - güvenli görünür yapı */
+/* Scroll reveal - güvenli hafif animasyon */
 .reveal {
   opacity: 1;
-  transform: none;
+  transform: translateY(14px);
+  transition: transform 0.5s ease;
 }
 
 .reveal.revealed {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
 
-.reveal-delay-1,
-.reveal-delay-2,
-.reveal-delay-3,
-.reveal-delay-4 {
-  transition-delay: 0s;
-}
+.reveal-delay-1 { transition-delay: 0.05s; }
+.reveal-delay-2 { transition-delay: 0.1s; }
+.reveal-delay-3 { transition-delay: 0.15s; }
+.reveal-delay-4 { transition-delay: 0.2s; }
 
   /* Review carousel transition */
   .review-enter-active, .review-leave-active { transition: opacity 0.4s ease, transform 0.4s ease; }
