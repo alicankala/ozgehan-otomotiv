@@ -297,7 +297,7 @@ window.removeEventListener('resize', updateNavArrows)
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
       <div class="flex items-center justify-center gap-2">
-        <div class="hidden md:flex md:w-11 md:h-11 rounded-xl items-center justify-center shrink-0 overflow-hidden bg-white">
+        <div class="hidden md:flex md:w-11 md:h-11 items-center justify-center shrink-0">
   <img
     src="/logo.png"
     alt="Özgehan Otomotiv Logo"
@@ -392,10 +392,7 @@ window.removeEventListener('resize', updateNavArrows)
 
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
-      <h1 class="soft-fade-up ...">
-  Aracınız<br/>
-  <span class="text-red-700 relative inline-block font-bold">
-    Emin Ellerde
+      
       <h1 class="soft-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
