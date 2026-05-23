@@ -324,7 +324,7 @@ window.removeEventListener('resize', updateNavArrows)
 
   </div>
 </header>
-<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-900 border-b border-slate-700">
+<nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-900">
   <div class="max-w-7xl mx-auto px-3 md:px-5 py-2 relative">
     <div class="relative mx-auto md:w-fit">
       <div
