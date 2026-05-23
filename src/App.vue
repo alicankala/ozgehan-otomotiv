@@ -284,7 +284,7 @@ onUnmounted(() => {
 </header>
 <nav class="sticky top-[72px] md:top-[84px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-3 md:px-5 relative">
-  <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 pr-10 md:pr-0">
+  <div class="flex items-center gap-2 md:justify-center overflow-x-auto no-scrollbar py-2 pr-14 md:pr-0">
       <button type="button" @click="scrollToSection('#anasayfa')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
         Anasayfa
       </button>
@@ -313,9 +313,13 @@ onUnmounted(() => {
         Randevu
       </button>
 
-      <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+            <button type="button" @click="scrollToSection('#iletisim')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
         İletişim
       </button>
+    </div>
+
+    <div class="pointer-events-none md:hidden absolute top-0 right-0 h-full w-16 z-20 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent flex items-center justify-end pr-3">
+      <span class="text-white text-2xl font-black animate-pulse">›</span>
     </div>
   </div>
 </nav>
