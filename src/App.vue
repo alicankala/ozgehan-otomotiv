@@ -327,7 +327,7 @@ onUnmounted(() => {
 
       <div class="border-x border-slate-800">
         <div class="text-white font-black text-sm md:text-xl tracking-tight">3 Uzman Usta</div>
-        <div class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Çekirdek Kadro</div>
+        <div class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Profesyonel Ekip</div>
       </div>
 
       <div>
