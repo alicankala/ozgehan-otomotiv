@@ -962,10 +962,10 @@ window.removeEventListener('resize', updateNavArrows)
   <Teleport to="body">
   <div
     v-if="showCallOptions"
-    class="fixed inset-0 z-[999] bg-slate-950/70 backdrop-blur-sm flex items-end md:items-center justify-center px-4"
+    class="fixed inset-0 z-[999] bg-slate-950/70 backdrop-blur-sm flex items-end md:items-center justify-center px-3 pb-4 md:px-4 md:pb-0"
     @click.self="showCallOptions = false"
   >
-    <div class="w-full max-w-sm bg-white rounded-t-3xl md:rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+    <div class="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 mb-safe">
       <div class="p-5 border-b border-slate-100 flex items-center justify-between">
         <div>
           <h3 class="text-lg font-black text-slate-950">Kimi aramak istersiniz?</h3>
