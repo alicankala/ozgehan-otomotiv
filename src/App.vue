@@ -778,12 +778,9 @@ window.removeEventListener('resize', updateNavArrows)
             </div>
             <div>
               <div class="text-white font-bold mb-1">Adres</div>
-              <a
-                href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
-                target="_blank"
-                class="text-slate-400 hover:text-amber-300 transition-colors text-sm md:text-base leading-relaxed">
-                Mega Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara
-              </a>
+              <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+  Mega Şaşmaz, Bahçekapı Mahallesi, 2685. Sokak, Şaşmaz Bulvarı Giriş: 8, No: A5, 06990 Etimesgut/Ankara
+</p>
             </div>
           </div>
 
