@@ -418,10 +418,10 @@ window.removeEventListener('resize', updateNavArrows)
 <main id="anasayfa" class="bg-white relative overflow-hidden scroll-mt-32 md:scroll-mt-40">
   <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
 
-  <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
+  <div class="max-w-7xl mx-auto px-4 pt-8 pb-10 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
       
-      <h1 class="soft-fade-up text-[38px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
+      <h1 class="soft-fade-up text-[36px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.06] mb-4 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
           Emin Ellerde
