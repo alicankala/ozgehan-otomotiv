@@ -326,7 +326,7 @@ window.removeEventListener('resize', updateNavArrows)
   />
 </div>
 
-        <div class="font-display text-[clamp(16px,4.9vw,21px)] sm:text-2xl md:text-3xl font-black uppercase tracking-[-0.06em] md:tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
+        <div class="font-display text-[clamp(18px,5.2vw,22px)] sm:text-2xl md:text-3xl font-black uppercase tracking-[-0.05em] md:tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
           <span class="text-white">Özgehan</span>
           <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
         </div>
@@ -421,7 +421,7 @@ window.removeEventListener('resize', updateNavArrows)
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
     <div class="text-center md:text-left flex flex-col items-center md:items-start">
       
-      <h1 class="soft-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
+      <h1 class="soft-fade-up text-[38px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] mb-5 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
           Emin Ellerde
