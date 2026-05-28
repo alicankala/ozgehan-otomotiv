@@ -794,7 +794,7 @@ window.removeEventListener('resize', updateNavArrows)
             <div>
               <div class="text-white font-bold mb-1">Çalışma Saatleri</div>
               <div class="text-slate-400 text-sm md:text-base">
-                Pazartesi – Cumartesi · 08:30 – 19:00
+                Pazartesi – Cumartesi · 07:00 – 19:00
               </div>
               <div class="inline-flex items-center gap-2 mt-2 text-xs font-semibold text-red-300 bg-red-950/40 border border-red-900/60 px-2.5 py-1 rounded-full">
                 <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
