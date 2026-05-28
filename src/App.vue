@@ -473,7 +473,7 @@ window.removeEventListener('resize', updateNavArrows)
       <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base">Tüm araç markaları ve modellerinde profesyonel servis hizmeti sunuyoruz.</p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
       <div class="reveal reveal-delay-1 p-3 md:p-6 bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 hover:border-red-400 hover:shadow-lg transition-all duration-300 group">
         <div class="w-9 h-9 md:w-12 md:h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 md:mb-5 border border-slate-200 group-hover:bg-red-50 group-hover:border-red-200 transition-colors shadow-inner">
           <svg class="w-5 h-5 md:w-6 md:h-6 text-slate-600 group-hover:text-red-700 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
@@ -622,7 +622,7 @@ window.removeEventListener('resize', updateNavArrows)
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Ustalığımız ve Atölyemiz</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           <div v-for="(img, i) in galleryImages" :key="i"
      class="reveal aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-red-400 hover:shadow-xl transition-all cursor-pointer group"
      :class="`reveal-delay-${Math.min(i + 1, 6)}`"
