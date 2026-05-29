@@ -156,30 +156,6 @@ const validatePhone = () => {
     phoneError.value = ''
   }
 }
-
-// Yorumlar Carousel
-const currentReview = ref(0)
-const reviews = [
-  {
-    text: "Yıllardır çözülemeyen tekleme arızasını yarım günde nokta atışı tespit edip çözdüler. Şaşmaz'da dürüst usta bulmak zor, Ali usta sağ olsun.",
-    author: "Hakan Ç.",
-    vehicle: "2015 VW Golf (Ağır Mekanik)"
-  },
-  {
-    text: "Periyodik bakım için gittim. Malzemeleri gözümün önünde açıp tek tek taktılar. Şeffaf ve temiz esnaflık, kesinlikle tavsiye ederim.",
-    author: "Murat K.",
-    vehicle: "2018 BMW 320d (Sıvı Bakımları)"
-  },
-  {
-    text: "Alt takımdan gelen o sinir bozucu sesi burası kesti. Gereksiz parça değiştirmeye kalkmıyorlar, neyse onu tamir ediyorlar.",
-    author: "Yasin B.",
-    vehicle: "2014 Ford Focus (Alt Takım Onarımı)"
-  },
-  {
-    text: "Motorda ciddi bir sorun vardı, başka yerler çok yüksek fiyat kesti. Burası hem daha uygun hem de daha hızlı teslim etti. Teşekkürler.",
-    author: "Emre S.",
-    vehicle: "2017 Renault Megane (Motor Onarımı)"
-  }
 ]
 
 let reviewTimer = null
@@ -194,7 +170,6 @@ const startReviewTimer = () => {
 
 const goToReview = (index) => {
   currentReview.value = index
-  startReviewTimer()
 }
 
 const nextReview = () => {
@@ -300,7 +275,6 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  if (reviewTimer) clearInterval(reviewTimer)
   if (timeCheckInterval) clearInterval(timeCheckInterval)
   window.removeEventListener('keydown', handleLightboxKeydown)
 window.removeEventListener('scroll', handleScrollTopButton)
@@ -374,10 +348,6 @@ window.removeEventListener('resize', updateNavArrows)
 
               <button type="button" @click="scrollToSection('#atolye')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
                 Atölye
-              </button>
-
-              <button type="button" @click="scrollToSection('#yorumlar')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
-                Yorumlar
               </button>
 
               <button type="button" @click="scrollToSection('#randevu')" class="shrink-0 px-3 py-2 rounded-full text-[11px] md:text-sm font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
@@ -674,56 +644,6 @@ window.removeEventListener('resize', updateNavArrows)
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="yorumlar" class="py-16 bg-white border-b border-slate-100 scroll-mt-32 md:scroll-mt-40">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="text-center mb-10 reveal">
-          <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">Referanslar</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Müşteri Deneyimleri</h2>
-        </div>
-
-        <div class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-hidden min-h-[240px] md:min-h-[220px] reveal">
-          <div class="absolute top-6 left-8 text-red-100 font-serif text-8xl leading-none select-none pointer-events-none font-black">"</div>
-          <button
-  type="button"
-  @click="prevReview"
-  class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none cursor-pointer">
-  ‹
-</button>
-<button
-  type="button"
-  @click="nextReview"
-  class="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow hover:bg-slate-100 hover:text-red-700 transition-all z-20 flex items-center justify-center text-2xl leading-none cursor-pointer">
-  ›
-</button>
-
-          <Transition name="review" mode="out-in">
-            <div :key="currentReview">
-              <p class="text-base md:text-xl text-slate-700 leading-relaxed italic mb-6 relative z-10">
-                "{{ reviews[currentReview].text }}"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold text-sm">
-                  {{ reviews[currentReview].author.charAt(0) }}
-                </div>
-                <div>
-                  <div class="font-bold text-slate-900">{{ reviews[currentReview].author }}</div>
-                  <div class="text-slate-500 text-sm">{{ reviews[currentReview].vehicle }}</div>
-                </div>
-                <div class="ml-auto text-yellow-400 text-lg">★★★★★</div>
-              </div>
-            </div>
-          </Transition>
-        </div>
-
-        <div class="flex justify-center gap-2 mt-5">
-          <button v-for="(_, i) in reviews" :key="i"
-        @click="goToReview(i)"
-        class="w-2.5 h-2.5 rounded-full transition-all"
-        :class="i === currentReview ? 'bg-red-600 w-6' : 'bg-slate-300 hover:bg-slate-400'"></button>
         </div>
       </div>
     </section>
