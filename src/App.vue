@@ -310,10 +310,10 @@ window.removeEventListener('resize', updateNavArrows)
 </script>
 
 <template>
-  <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden pb-16 md:pb-0">
+  <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden">
 
    <div class="sticky top-0 z-50 bg-slate-950 shadow-2xl">
-  <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5">
+  <header class="bg-slate-950 text-white px-3 py-2.5 md:px-5 md:py-5">
         <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center w-full overflow-visible">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
@@ -429,26 +429,44 @@ window.removeEventListener('resize', updateNavArrows)
         </span>
       </h1>
 
-          <p class="soft-fade-up-delay text-lg md:text-xl text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-lg font-medium">
+          <p class="soft-fade-up-delay text-[17px] md:text-xl text-slate-600 mb-7 md:mb-10 leading-relaxed max-w-lg font-medium">
             Profesyonel motor mekanik, periyodik bakım ve arıza tespitinde yılların sanayi tecrübesiyle <strong class="text-slate-900">dürüst ve garantili hizmet.</strong>
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a href="https://wa.me/905326213429?text=Merhaba,%20%C3%96zgehan%20Otomotiv%20sitenizden%20ula%C5%9F%C4%B1yorum."
-               target="_blank"
-               class="inline-flex items-center justify-center gap-3 px-7 py-4 text-base font-bold text-white transition-all bg-emerald-600 rounded-xl shadow-lg hover:bg-emerald-700 hover:-translate-y-1 active:translate-y-0">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              WhatsApp'tan Ulaşın
-            </a>
-            <a href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
-               target="_blank"
-               class="inline-flex items-center justify-center gap-3 px-7 py-4 text-base font-bold text-slate-700 transition-all bg-white rounded-xl border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50 hover:-translate-y-1 active:translate-y-0">
-              📍 Yol Tarifi Al
-            </a>
-          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-md sm:max-w-none sm:w-auto">
+  <a
+    href="https://wa.me/905326213429?text=Merhaba,%20%C3%96zgehan%20Otomotiv%20sitenizden%20ula%C5%9F%C4%B1yorum."
+    target="_blank"
+    class="inline-flex items-center justify-center gap-2 px-5 py-4 text-sm md:text-base font-bold text-white transition-all bg-emerald-600 rounded-xl shadow-lg hover:bg-emerald-700 hover:-translate-y-1 active:translate-y-0"
+  >
+    <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    WhatsApp
+  </a>
+
+  <button
+    type="button"
+    @click="showCallOptions = true"
+    class="inline-flex items-center justify-center gap-2 px-5 py-4 text-sm md:text-base font-bold text-white transition-all bg-red-700 rounded-xl shadow-lg hover:bg-red-600 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
+  >
+    <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+    </svg>
+    Hemen Ara
+  </button>
+
+  <a
+    href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
+    target="_blank"
+    class="inline-flex items-center justify-center gap-2 px-5 py-4 text-sm md:text-base font-bold text-slate-700 transition-all bg-white rounded-xl border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50 hover:-translate-y-1 active:translate-y-0"
+  >
+    📍 Yol Tarifi
+  </a>
+</div>
         </div>
 
-        <div class="w-full h-[260px] sm:h-[360px] md:h-[460px] bg-slate-200 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-4 md:mt-0 relative group">
+        <div class="w-full h-[240px] sm:h-[360px] md:h-[460px] bg-slate-200 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-2 md:mt-0 relative group">
           <img
   src="/logo-full.png"
   alt="Özgehan Otomotiv"
@@ -893,28 +911,7 @@ window.removeEventListener('resize', updateNavArrows)
         <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
       </div>
     </footer>
-    <div class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-3 text-center text-white font-bold text-xs shadow-2xl z-50 pb-safe">
-      <button
-  type="button"
-  @click="showCallOptions = true"
-  class="py-3.5 border-r border-slate-800 flex flex-col items-center justify-center gap-1 active:bg-slate-900 transition-colors cursor-pointer"
->
-  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-  </svg>
-  Hemen Ara
-</button>
-      <a href="https://wa.me/905326213429?text=Merhaba,%20%C3%96zgehan%20Otomotiv%20sitenizden%20ula%C5%9F%C4%B1yorum." target="_blank"
-         class="py-3.5 border-r border-slate-800 bg-emerald-950/30 text-emerald-400 flex flex-col items-center justify-center gap-1 active:bg-emerald-900 transition-colors">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        WhatsApp
-      </a>
-      <a href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6" target="_blank"
-         class="py-3.5 flex flex-col items-center justify-center gap-1 text-slate-300 active:bg-slate-900 transition-colors">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-        Yol Tarifi
-      </a>
-    </div>
+    
 
     <Teleport to="body">
       <button
