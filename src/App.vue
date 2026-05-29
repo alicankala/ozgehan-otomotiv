@@ -646,7 +646,30 @@ window.removeEventListener('resize', updateNavArrows)
         </div>
       </div>
     </section>
+<section class="py-8 md:py-10 bg-white border-b border-slate-200">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="reveal bg-slate-50 border border-slate-200 rounded-3xl p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div>
+        <div class="text-xs font-bold tracking-widest uppercase text-red-600 mb-1">
+          Google Yorumları
+        </div>
+        <h2 class="text-xl md:text-2xl font-black text-slate-950">
+          Deneyiminizi paylaşın veya yorumlarımızı inceleyin
+        </h2>
+        <p class="text-slate-500 text-sm md:text-base mt-1">
+          Özgehan Otomotiv’i Google Haritalar üzerinden değerlendirebilirsiniz.
+        </p>
+      </div>
 
+      <a
+        href="https://maps.app.goo.gl/mv6x4r5bFJwk56RKA"
+        target="_blank"
+        class="inline-flex items-center justify-center gap-2 bg-slate-900 border border-slate-700 text-white px-5 py-3 rounded-2xl text-sm font-bold hover:bg-red-700 hover:border-red-600 transition-all whitespace-nowrap">
+        ⭐ Google’da İncele
+      </a>
+    </div>
+  </div>
+</section>
     <section id="randevu" class="py-16 bg-slate-900 text-white border-t border-slate-800 scroll-mt-32 md:scroll-mt-40">
       <div class="max-w-xl mx-auto px-4">
         <div class="text-center mb-8 reveal">
@@ -849,7 +872,7 @@ window.removeEventListener('resize', updateNavArrows)
   type="button"
   @click="scrollToTop"
   aria-label="En üste dön"
-  class="fixed right-4 bottom-24 md:bottom-6 z-40 w-11 h-11 rounded-full bg-slate-950 text-white border border-slate-700 shadow-2xl flex items-center justify-center hover:bg-red-700 hover:border-red-600 active:scale-95 transition-all cursor-pointer">
+  class="fixed right-4 bottom-5 md:bottom-6 z-40 w-11 h-11 rounded-full bg-slate-950 text-white border border-slate-700 shadow-2xl flex items-center justify-center hover:bg-red-700 hover:border-red-600 active:scale-95 transition-all cursor-pointer">
   ↑
 </button>
   <div v-if="selectedImage"
