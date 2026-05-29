@@ -291,13 +291,6 @@ window.removeEventListener('resize', updateNavArrows)
     
     <div class="flex items-center justify-center">
       <div class="flex items-center justify-center gap-1 md:gap-2 max-w-full overflow-visible">
-        <div class="hidden md:flex md:w-14 md:h-14 items-center justify-center shrink-0">
-  <img
-    src="/logo.png"
-    alt="Özgehan Otomotiv Logo"
-    class="w-full h-full object-contain scale-150"
-  />
-</div>
 
         <!-- Mobil logo yazısı -->
 <div class="md:hidden font-display uppercase text-center leading-none max-w-[96vw]">
