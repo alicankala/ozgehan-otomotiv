@@ -221,7 +221,7 @@ const checkIsOpen = () => {
   const minutes = turkeyTime.getMinutes()
   const timeInMinutes = hours * 60 + minutes
 
-  const openTime = 8 * 60 + 30
+  const openTime = 7 * 60
   const closeTime = 19 * 60
 
   isOpen.value = day !== 0 && timeInMinutes >= openTime && timeInMinutes < closeTime
@@ -326,10 +326,22 @@ window.removeEventListener('resize', updateNavArrows)
   />
 </div>
 
-        <div class="font-display text-[clamp(19px,5.6vw,23px)] sm:text-[28px] md:text-[34px] lg:text-[38px] font-black uppercase tracking-[-0.10em] md:tracking-[-0.06em] whitespace-nowrap leading-none md:scale-y-125 origin-left max-w-[94vw] md:max-w-none">
-          <span class="text-white">Özgehan</span>
-          <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
-        </div>
+        <!-- Mobil logo yazısı -->
+<div class="md:hidden font-display uppercase text-center leading-none max-w-[96vw]">
+  <div class="text-white text-[34px] font-black tracking-[-0.07em] whitespace-nowrap">
+    Özgehan
+  </div>
+
+  <div class="text-slate-400 text-[17px] font-black tracking-[0.24em] whitespace-nowrap mt-1 pl-2">
+    Otomotiv
+  </div>
+</div>
+
+<!-- Web logo yazısı - eski görünüm korunuyor -->
+<div class="hidden md:block font-display md:text-[34px] lg:text-[38px] font-black uppercase tracking-[-0.06em] whitespace-nowrap leading-none md:scale-y-125 origin-left">
+  <span class="text-white">Özgehan</span>
+  <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
+</div>
       </div>
     </div>
 
@@ -866,7 +878,7 @@ window.removeEventListener('resize', updateNavArrows)
       <div class="reveal">
         <div class="h-full min-h-[320px] md:min-h-[520px] bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl relative">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.570177466949!2d32.719895799999996!3d39.9286341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347ee37df85e5%3A0x41d15ac7bb58e9b!2zTWVnYSDFnmHFn21heg!5e0!3m2!1str!2str!4v1779471948767!5m2!1str!2str"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d776083.2664311309!2d31.877967228387977!3d40.550972076827385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34911f6405805%3A0x954e926b60b7fbe8!2s%C3%96zgehan%20Otomotiv!5e0!3m2!1str!2str!4v1780067654927!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             width="100%"
             height="100%"
             style="border:0;"
