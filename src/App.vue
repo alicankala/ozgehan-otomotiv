@@ -156,7 +156,6 @@ const validatePhone = () => {
     phoneError.value = ''
   }
 }
-]
 
 let reviewTimer = null
 
