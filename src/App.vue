@@ -316,7 +316,7 @@ window.removeEventListener('resize', updateNavArrows)
   <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5">
         <div class="max-w-7xl mx-auto flex justify-center items-center w-full overflow-visible">
     
-    <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
+    <div class="flex items-center justify-center">
       <div class="flex items-center justify-center gap-1 md:gap-2 max-w-full overflow-visible">
         <div class="hidden md:flex md:w-14 md:h-14 items-center justify-center shrink-0">
   <img
@@ -326,15 +326,11 @@ window.removeEventListener('resize', updateNavArrows)
   />
 </div>
 
-        <div class="font-display text-[clamp(18px,5.2vw,22px)] sm:text-2xl md:text-3xl font-black uppercase tracking-[-0.05em] md:tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left">
+        <div class="font-display text-[clamp(19px,5.8vw,24px)] sm:text-2xl md:text-3xl font-black uppercase tracking-[-0.08em] md:tracking-tight whitespace-nowrap leading-none md:scale-y-125 origin-left max-w-[96vw]">
           <span class="text-white">Özgehan</span>
           <span class="text-slate-400 ml-1 font-black">Otomotiv</span>
         </div>
       </div>
-
-      <div class="hidden md:block text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-left ml-1 pt-1">
-  1974’TEN BERİ
-</div>
     </div>
 
     
