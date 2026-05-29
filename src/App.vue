@@ -453,13 +453,13 @@ window.removeEventListener('resize', updateNavArrows)
   </button>
 
   <a
-    href="https://maps.app.goo.gl/mv6x4r5bFJwk56RKA"
-    target="_blank"
-    class="inline-flex items-center justify-center gap-1.5 md:gap-2 px-2.5 md:px-5 py-3 md:py-3.5 text-xs md:text-sm font-black text-slate-700 transition-all bg-white rounded-2xl border border-slate-200 shadow-md shadow-slate-900/5 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0"
-  >
-    <span class="text-sm md:text-base">📍</span>
-    <span class="truncate">Yol Tarifi</span>
-  </a>
+  href="https://maps.app.goo.gl/mv6x4r5bFJwk56RKA"
+  target="_blank"
+  class="inline-flex items-center justify-center gap-1.5 md:gap-2 px-2.5 md:px-5 py-3 md:py-3.5 text-xs md:text-sm font-black text-white transition-all bg-slate-800 rounded-2xl border border-slate-700 shadow-md shadow-slate-900/10 hover:bg-slate-700 hover:border-slate-600 hover:-translate-y-0.5 active:translate-y-0"
+>
+  <span class="text-sm md:text-base">📍</span>
+  <span class="truncate">Yol Tarifi</span>
+</a>
 </div>
         </div>
 
