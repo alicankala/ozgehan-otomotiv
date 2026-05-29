@@ -313,8 +313,8 @@ window.removeEventListener('resize', updateNavArrows)
   <div class="min-h-screen w-full bg-slate-100 text-slate-900 font-sans relative overflow-x-hidden">
 
    <div class="sticky top-0 z-50 bg-slate-950 shadow-2xl">
-  <header class="bg-slate-950 text-white px-3 py-2.5 md:px-5 md:py-5">
-        <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center w-full overflow-visible">
+  <header class="bg-slate-950 text-white px-3 py-3 md:px-5 md:py-5">
+        <div class="max-w-7xl mx-auto flex justify-center items-center w-full overflow-visible">
     
     <div class="flex flex-col md:flex-row md:items-center justify-center gap-0.5 md:gap-3">
       <div class="flex items-center justify-center gap-1 md:gap-2 max-w-full overflow-visible">
@@ -332,24 +332,12 @@ window.removeEventListener('resize', updateNavArrows)
         </div>
       </div>
 
-      <div class="text-[10px] md:text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-center md:text-left mt-0.5 md:mt-0 md:ml-1 md:pt-1">
-        1974’TEN BERİ
-      </div>
+      <div class="hidden md:block text-xs text-amber-400 font-bold uppercase tracking-[0.22em] text-left ml-1 pt-1">
+  1974’TEN BERİ
+</div>
     </div>
 
-    <div class="hidden md:flex items-center gap-4">
-      <button
-  type="button"
-  @click="showCallOptions = true"
-  class="font-bold text-base bg-slate-800 border border-red-600/70 px-5 py-2.5 rounded-full hover:bg-red-700 hover:border-red-500 transition-all flex items-center gap-2 shadow-lg whitespace-nowrap hover:scale-105 active:scale-95 cursor-pointer"
->
-  <svg class="w-4 h-4 shrink-0 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-  </svg>
-  <span class="text-white font-black">Hemen Ara</span>
-</button>
-    </div>
-
+    
         </div>
       </header>
       <nav class="bg-slate-900 -mt-px">
@@ -418,10 +406,10 @@ window.removeEventListener('resize', updateNavArrows)
 <main id="anasayfa" class="bg-white relative overflow-hidden scroll-mt-32 md:scroll-mt-40">
   <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50 clip-diagonal hidden md:block pointer-events-none" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"></div>
 
-  <div class="max-w-7xl mx-auto px-4 pt-8 pb-10 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
-    <div class="text-center md:text-left flex flex-col items-center md:items-start">
-      
-      <h1 class="soft-fade-up text-[36px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.06] mb-4 md:mb-6 tracking-tight">
+  <div class="max-w-7xl mx-auto px-4 pt-9 pb-10 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
+
+<div class="text-center md:text-left">
+      <h1 class="soft-fade-up text-[38px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.05] mb-4 md:mb-6 tracking-tight">
         Aracınız<br/>
         <span class="text-red-700 relative inline-block font-bold">
           Emin Ellerde
