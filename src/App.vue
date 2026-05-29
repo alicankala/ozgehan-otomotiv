@@ -876,16 +876,15 @@ window.removeEventListener('resize', updateNavArrows)
       </div>
 
       <div class="reveal">
-        <div class="h-full min-h-[320px] md:min-h-[520px] bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl relative">
-          <iframe
+        <div class="h-[420px] md:h-[520px] bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl relative">
+  <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d776083.2664311309!2d31.877967228387977!3d40.550972076827385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34911f6405805%3A0x954e926b60b7fbe8!2s%C3%96zgehan%20Otomotiv!5e0!3m2!1str!2str!4v1780067654927!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+            class="absolute inset-0 w-full h-full"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 
           <a
             href="https://maps.app.goo.gl/oJJueHwLjsezv2y87"
