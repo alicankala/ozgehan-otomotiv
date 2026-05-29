@@ -453,7 +453,7 @@ window.removeEventListener('resize', updateNavArrows)
   </button>
 
   <a
-    href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
+    href="https://maps.app.goo.gl/oJJueHwLjsezv2y87"
     target="_blank"
     class="inline-flex items-center justify-center gap-2 px-5 py-4 text-sm md:text-base font-bold text-slate-700 transition-all bg-white rounded-xl border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50 hover:-translate-y-1 active:translate-y-0"
   >
@@ -888,7 +888,7 @@ window.removeEventListener('resize', updateNavArrows)
           </iframe>
 
           <a
-            href="https://maps.app.goo.gl/hC9RY8HX29PepBwY6"
+            href="https://maps.app.goo.gl/oJJueHwLjsezv2y87"
             target="_blank"
             class="absolute bottom-4 left-4 right-4 md:left-5 md:right-auto inline-flex items-center justify-center gap-2 bg-slate-950/90 backdrop-blur border border-slate-700 text-white px-5 py-3 rounded-2xl text-sm font-bold hover:bg-red-700 hover:border-red-600 transition-all">
             📍 Google Haritalar’da Aç
