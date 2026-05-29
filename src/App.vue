@@ -662,11 +662,11 @@ window.removeEventListener('resize', updateNavArrows)
       </div>
 
       <a
-        href="https://maps.app.goo.gl/mv6x4r5bFJwk56RKA"
-        target="_blank"
-        class="inline-flex items-center justify-center gap-2 bg-slate-900 border border-slate-700 text-white px-5 py-3 rounded-2xl text-sm font-bold hover:bg-red-700 hover:border-red-600 transition-all whitespace-nowrap">
-        ⭐ Google’da İncele
-      </a>
+  href="https://maps.app.goo.gl/mv6x4r5bFJwk56RKA"
+  target="_blank"
+  class="inline-flex items-center justify-center gap-2 bg-slate-900 border border-slate-700 text-white px-5 py-3 rounded-2xl text-sm font-bold hover:bg-red-700 hover:border-red-600 transition-all whitespace-nowrap">
+  ⭐ Google Yorumları
+</a>
     </div>
   </div>
 </section>
