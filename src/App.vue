@@ -404,10 +404,12 @@ window.removeEventListener('resize', updateNavArrows)
 
         <div class="w-full h-[240px] sm:h-[360px] md:h-[460px] bg-slate-200 rounded-3xl shadow-2xl overflow-hidden border-4 md:border-8 border-slate-100 mt-2 md:mt-0 relative group">
           <img
-  src="/logo-full.png"
-  alt="Özgehan Otomotiv"
+  src="/logo-full.png?v=8"
+  alt="Özgehan Otomotiv Ankara Mega Şaşmaz oto mekanik ve tamir"
   loading="eager"
   fetchpriority="high"
+  width="1600"
+  height="900"
   class="w-full h-full object-contain p-6 md:p-10 bg-white"
 />
           <div
