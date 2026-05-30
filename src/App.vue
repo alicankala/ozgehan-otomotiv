@@ -1,4 +1,11 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import is1 from './assets/is-1.jpeg'
+import is2 from './assets/is-2.jpeg'
+import is3 from './assets/is-3.jpeg'
+import is4 from './assets/is-4.jpeg'
+import is5 from './assets/is-5.jpeg'
+import is6 from './assets/is-6.jpeg'
 const showCallOptions = ref(false)
 
 const callOptions = [
@@ -18,13 +25,7 @@ const callOptions = [
     href: 'tel:05077276716'
   }
 ]
-import { ref, onMounted, onUnmounted } from 'vue'
-import is1 from './assets/is-1.jpeg'
-import is2 from './assets/is-2.jpeg'
-import is3 from './assets/is-3.jpeg'
-import is4 from './assets/is-4.jpeg'
-import is5 from './assets/is-5.jpeg'
-import is6 from './assets/is-6.jpeg'
+
 if ('scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual'
 }
@@ -157,29 +158,6 @@ const validatePhone = () => {
   }
 }
 
-let reviewTimer = null
-
-const startReviewTimer = () => {
-  if (reviewTimer) clearInterval(reviewTimer)
-
-  reviewTimer = setInterval(() => {
-    currentReview.value = (currentReview.value + 1) % reviews.length
-  }, 4500)
-}
-
-const goToReview = (index) => {
-  currentReview.value = index
-}
-
-const nextReview = () => {
-  currentReview.value = (currentReview.value + 1) % reviews.length
-  startReviewTimer()
-}
-
-const prevReview = () => {
-  currentReview.value = (currentReview.value - 1 + reviews.length) % reviews.length
-  startReviewTimer()
-}
 // İşletme Saatleri ve Açık/Kapalı Kontrolü
 const isOpen = ref(false)
 
@@ -249,7 +227,6 @@ const handleFormSubmit = async () => {
 }
 
 onMounted(() => {
-  startReviewTimer()
   checkIsOpen()
   timeCheckInterval = setInterval(checkIsOpen, 60000)
   window.addEventListener('keydown', handleLightboxKeydown)
