@@ -92,7 +92,9 @@ const openLightbox = (index) => {
 }
 
 const closeLightbox = () => {
-  selectedImage.value = null
+  const scrollY = savedScrollY
+
+  document.documentElement.style.scrollBehavior = 'auto'
 
   document.body.style.position = ''
   document.body.style.top = ''
@@ -100,7 +102,17 @@ const closeLightbox = () => {
   document.body.style.right = ''
   document.body.style.width = ''
 
-  window.scrollTo(0, savedScrollY)
+  window.scrollTo({
+    top: scrollY,
+    left: 0,
+    behavior: 'auto'
+  })
+
+  selectedImage.value = null
+
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = ''
+  }, 0)
 }
 
 const nextImage = () => {
@@ -278,6 +290,7 @@ onUnmounted(() => {
   document.body.style.left = ''
   document.body.style.right = ''
   document.body.style.width = ''
+  document.documentElement.style.scrollBehavior = ''
 
   if (observer) observer.disconnect()
 })
