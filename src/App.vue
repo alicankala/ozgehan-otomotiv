@@ -890,7 +890,7 @@ onUnmounted(() => {
      @touchend="handleLightboxTouchEnd">
 
 <button
-  class="absolute top-4 right-5 md:right-6 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-5xl md:text-6xl hover:scale-110 transition-all leading-none z-20 flex items-center justify-center backdrop-blur border border-white/10 cursor-pointer"
+  class="absolute top-4 right-6 text-white/70 hover:text-white text-5xl md:text-6xl hover:scale-110 transition-all leading-none z-20 cursor-pointer"
   @click.stop="closeLightbox"
   aria-label="Fotoğrafı kapat">
   ×
