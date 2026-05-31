@@ -76,14 +76,31 @@ const galleryImages = [is1, is2, is3, is4, is5, is6]
 const selectedImage = ref(null)
 const selectedImageIndex = ref(0)
 const lightboxTouchStartX = ref(null)
+let savedScrollY = 0
 
 const openLightbox = (index) => {
   selectedImageIndex.value = index
   selectedImage.value = galleryImages[index]
+
+  savedScrollY = window.scrollY
+
+  document.body.style.position = 'fixed'
+  document.body.style.top = `-${savedScrollY}px`
+  document.body.style.left = '0'
+  document.body.style.right = '0'
+  document.body.style.width = '100%'
 }
 
 const closeLightbox = () => {
   selectedImage.value = null
+
+  document.body.style.position = ''
+  document.body.style.top = ''
+  document.body.style.left = ''
+  document.body.style.right = ''
+  document.body.style.width = ''
+
+  window.scrollTo(0, savedScrollY)
 }
 
 const nextImage = () => {
@@ -253,8 +270,15 @@ onMounted(() => {
 onUnmounted(() => {
   if (timeCheckInterval) clearInterval(timeCheckInterval)
   window.removeEventListener('keydown', handleLightboxKeydown)
-window.removeEventListener('scroll', handleScrollTopButton)
-window.removeEventListener('resize', updateNavArrows)
+  window.removeEventListener('scroll', handleScrollTopButton)
+  window.removeEventListener('resize', updateNavArrows)
+
+  document.body.style.position = ''
+  document.body.style.top = ''
+  document.body.style.left = ''
+  document.body.style.right = ''
+  document.body.style.width = ''
+
   if (observer) observer.disconnect()
 })
 </script>
