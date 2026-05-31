@@ -832,7 +832,6 @@ window.removeEventListener('resize', updateNavArrows)
     <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800 text-sm">
       <div class="space-y-2">
         <div class="font-display text-white font-bold text-xl tracking-wide">Özgehan Otomotiv</div>
-        <p>Mega Şaşmaz Oto Sanayi, Etimesgut / Ankara</p>
         <p class="text-xs opacity-50 pt-3">© 2026 Özgehan Otomotiv. Tüm hakları saklıdır.</p>
       </div>
     </footer>
