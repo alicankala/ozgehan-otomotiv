@@ -693,7 +693,7 @@ onUnmounted(() => {
           <div v-if="!isSubmitted" class="space-y-4">
             <div>
               <label class="block text-sm font-semibold text-slate-300 mb-1.5">Adınız Soyadınız <span class="text-red-500">*</span></label>
-              <input v-model="name" type="text" required placeholder="Ahmet Yılmaz"
+              <input v-model="name" type="text" required placeholder="Ahmet Şahin"
                      class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-colors text-sm"/>
             </div>
             <div>
