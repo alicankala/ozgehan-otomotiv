@@ -830,15 +830,19 @@ onUnmounted(() => {
       <div class="reveal">
   <div class="bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 shadow-2xl">
     
-    <div class="h-[360px] md:h-[500px] relative overflow-hidden">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d556.711942739297!2d32.71916124390329!3d39.92829100306336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34911f6405805%3A0x954e926b60b7fbe8!2s%C3%96zgehan%20Otomotiv!5e0!3m2!1str!2str!4v1780068872623!5m2!1str!2str"
-        class="absolute inset-0 w-full h-full"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+<div class="h-[360px] md:h-[500px] relative overflow-hidden">
+  <div class="absolute inset-0 flex items-center justify-center bg-slate-800 text-slate-300 text-sm font-bold">
+    Harita yükleniyor...
+  </div>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d556.711942739297!2d32.71916124390329!3d39.92829100306336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34911f6405805%3A0x954e926b60b7fbe8!2s%C3%96zgehan%20Otomotiv!5e0!3m2!1str!2str!4v1780068872623!5m2!1str!2str"
+    class="absolute inset-0 w-full h-full"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 
       <!-- Mobilde haritanın içinde yüzen buton -->
       <a
