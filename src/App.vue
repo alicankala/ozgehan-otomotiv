@@ -10,6 +10,11 @@ const showCallOptions = ref(false)
 
 const callOptions = [
   {
+    name: 'Sabit Hat',
+    phone: '(0312) 511 43 08',
+    href: 'tel:03125114308'
+  },
+  {
     name: 'Ali Kala',
     phone: '0532 621 34 29',
     href: 'tel:05326213429'
@@ -799,7 +804,13 @@ onUnmounted(() => {
                 <div class="text-white font-bold mb-3">Telefon Numaraları</div>
 
                 <div class="divide-y divide-slate-800/80">
-                  <a href="tel:05326213429" class="flex items-center justify-between gap-4 py-2.5 first:pt-0 group/phone">
+                  <a href="tel:03125114308" class="flex items-center justify-between gap-4 py-2.5 first:pt-0 group/phone">
+  <span class="text-slate-400 text-sm">Sabit Hat</span>
+  <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
+    (0312) 511 43 08
+  </span>
+</a>
+                  <a href="tel:05326213429" class="flex items-center justify-between gap-4 py-2.5 group/phone">
                     <span class="text-slate-400 text-sm">Ali Kala</span>
                     <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
                       0532 621 34 29
