@@ -11,7 +11,7 @@ const showCallOptions = ref(false)
 const callOptions = [
   {
     name: 'Sabit Hat',
-    phone: '(0312) 511 43 08',
+    phone: '0312 511 43 08',
     href: 'tel:03125114308'
   },
   {
@@ -807,7 +807,7 @@ onUnmounted(() => {
                   <a href="tel:03125114308" class="flex items-center justify-between gap-4 py-2.5 first:pt-0 group/phone">
   <span class="text-slate-400 text-sm">Sabit Hat</span>
   <span class="text-slate-100 text-sm md:text-base font-semibold tabular-nums group-hover/phone:text-amber-300 transition-colors">
-    (0312) 511 43 08
+    0312 511 43 08
   </span>
 </a>
                   <a href="tel:05326213429" class="flex items-center justify-between gap-4 py-2.5 group/phone">
