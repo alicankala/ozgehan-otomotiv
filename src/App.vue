@@ -641,7 +641,7 @@ onUnmounted(() => {
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-10 reveal">
           <span class="text-xs font-bold tracking-widest uppercase text-red-600 mb-3 block">İş Kalitemiz</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Ustalığımız ve Atölyemiz</h2>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-950">Atölyemiz</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           <div v-for="(img, i) in galleryImages" :key="i"
